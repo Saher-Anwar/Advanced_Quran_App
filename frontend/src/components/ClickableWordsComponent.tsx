@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import { WordInfo } from '../types/Word'
+import { TooltipData } from '../types/Tooltip';
+
 import {
   View,
   Text,
@@ -7,20 +10,6 @@ import {
   Modal,
   Dimensions,
 } from 'react-native';
-
-interface WordInfo {
-  [key: string]: {
-    definition: string;
-    type: string;
-    example?: string;
-  };
-}
-
-interface TooltipData {
-  word: string;
-  info: WordInfo[string];
-  position: { x: number; y: number };
-}
 
 const ClickableWordsComponent: React.FC = () => {
   const [tooltip, setTooltip] = useState<TooltipData | null>(null);
