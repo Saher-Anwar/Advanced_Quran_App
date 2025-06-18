@@ -17,7 +17,10 @@ const ClickableWord = (word: WordInfo) => {
             <TouchableOpacity 
                 ref={ref}
                 onPress={handlePress}
-                style={styles.button}>
+                style={[
+                  styles.button,
+                  isVisible && styles.highlightedButton
+                  ]}>
                 <Text style={styles.buttonText}>{word.word}</Text>
             </TouchableOpacity>
 
@@ -37,14 +40,18 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   button: {
-    backgroundColor: '#007AFF',
     paddingHorizontal: 16,
     paddingVertical: 8,
     borderRadius: 8,
   },
   buttonText: {
-    color: 'white',
+    color: 'black',
     fontSize: 16,
     fontWeight: '500',
   },
+  highlightedButton: {
+    backgroundColor: '#d4e6ff',
+    borderColor: '#007AFF',
+    borderWidth: 1,
+  }
 });
