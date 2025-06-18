@@ -2,7 +2,7 @@ import { RefObject, useRef, useState } from "react";
 import { TouchableOpacity, Text, View, StyleSheet } from "react-native";
 import { WordInfo } from "../types/Word";
 import CustomPopover from "./CustomPopover";
-import { ClickableWordProps } from "../types/Popover";
+import { ClickableWordProps } from "../types/Word";
 
 
 const ClickableWord = ({ word, onWordPress }: ClickableWordProps) => {

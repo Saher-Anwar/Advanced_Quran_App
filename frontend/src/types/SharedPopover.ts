@@ -8,8 +8,3 @@ export interface SharedPopoverProps{
     isVisible: boolean
     onClose: () => void
 }
-
-export interface ClickableWordProps {
-    word: WordInfo
-    onWordPress: (word:WordInfo, ref: RefObject<View>) => void
-}
