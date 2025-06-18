@@ -1,7 +1,8 @@
+import wordInfo from "../mock_data/word_data";
+
 export interface WordInfo {
-    [key: string]: {
-      definition: string;
-      type: string;
-      example?: string;
-    };
-  }
+    word: string
+    definition: string;
+    type: string;
+    example?: string;
+}
