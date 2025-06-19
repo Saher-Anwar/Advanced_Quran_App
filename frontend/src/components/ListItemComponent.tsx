@@ -7,7 +7,7 @@ const ListItemComponent = (listItemInfo: ChapterListItemData) => {
   return (
     <View style={styles.container}>
       <View style={styles.symbolContainer}>
-        <NumberSymbol number={0}/>
+        <NumberSymbol number={listItemInfo.chapterNumber} />
       </View>
       <View style={styles.listItemInfoContainer}>
         <ListItemInfo {...listItemInfo}></ListItemInfo>
@@ -16,36 +16,36 @@ const ListItemComponent = (listItemInfo: ChapterListItemData) => {
         <Text style={styles.translationText}>{listItemInfo.translation}</Text>
       </View>
     </View>
-  )
+  );
 };
 
 export default ListItemComponent;
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: 'row',
-    backgroundColor: 'lightblue',
-    margin: 10
+    flexDirection: "row",
+    backgroundColor: "lightblue",
+    margin: 10,
   },
   symbolContainer: {
     flex: 2,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: 'red'
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "red",
   },
   listItemInfoContainer: {
     flexGrow: 4,
     flexShrink: 0,
-    backgroundColor: 'yellow',
-    paddingHorizontal: 10
+    backgroundColor: "yellow",
+    paddingHorizontal: 10,
   },
   translationContainer: {
     flex: 4,
-    backgroundColor: 'gray',
-    paddingHorizontal: 5
+    backgroundColor: "gray",
+    paddingHorizontal: 5,
   },
   translationText: {
-    textAlign: 'center',
-    fontSize: 18
-  }
-})
+    textAlign: "center",
+    fontSize: 18,
+  },
+});
