@@ -12,13 +12,21 @@ const HomeScreen = () => {
     )
 }
 
+export default HomeScreen
+
 const styles = StyleSheet.create({
     page: {
-        display: 'flex'
+        flex: 1,
+        justifyContent: 'center',
+        backgroundColor: 'lightblue'
     },
     buttonsContainer: {
         flexDirection: 'column',
-        marginVertical: 10,
+        justifyContent: 'space-between',
+        gap: 20,
+        paddingVertical: 20,
         marginHorizontal: 50,
+        paddingHorizontal: 10,
+        backgroundColor: 'white',
     },
 })
