@@ -11,15 +11,10 @@ const App = () => {
         <ListItemComponent {...chapters[0]} />
         <ListItemComponent {...chapters[1]} />
         <ListItemComponent {...chapters[2]} />
-
         <ListItemComponent {...chapters[3]} />
-
         <ListItemComponent {...chapters[4]} />
-
         <ListItemComponent {...chapters[5]} />
-
         <ListItemComponent {...chapters[6]} />
-
         <ListItemComponent {...chapters[7]} />
       </View>
     </>
