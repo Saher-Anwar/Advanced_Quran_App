@@ -5,7 +5,6 @@ import SharedPopover from "./SharedPopover";
 import ClickableWord from "./ClickableWord";
 import React from "react";
 
-
 const ParagraphWithClickableWords = ({ words }: { words: WordInfo[] }) => {
   const [selectedWord, setSelectedWord] = useState<WordInfo | null>(null);
   const [anchorRef, setAnchorRef] = useState<RefObject<View> | null>(null);
@@ -31,6 +30,7 @@ const ParagraphWithClickableWords = ({ words }: { words: WordInfo[] }) => {
             <ClickableWord
               word={word}
               onWordPress={handleWordPress}
+              isSelected={selectedWord?.id === word.id && isPopoverVisible}
             />
             {/* Add space between words */}
             {index < words.length - 1 && <Text style={styles.space}> </Text>}
@@ -52,17 +52,6 @@ const ParagraphWithClickableWords = ({ words }: { words: WordInfo[] }) => {
 export default ParagraphWithClickableWords
 
 const styles = StyleSheet.create({
-  appContainer: {
-    flex: 1,
-    padding: 20,
-    backgroundColor: '#f5f5f5',
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    marginBottom: 20,
-    textAlign: 'center',
-  },
   paragraphContainer: {
     backgroundColor: 'white',
     padding: 16,
@@ -76,16 +65,6 @@ const styles = StyleSheet.create({
   paragraph: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    lineHeight: 24,
-  },
-  wordButton: {
-    borderBottomWidth: 1,
-    borderBottomColor: '#007AFF',
-    borderStyle: 'dotted',
-  },
-  wordText: {
-    fontSize: 16,
-    color: '#007AFF',
     lineHeight: 24,
   },
   space: {

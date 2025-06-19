@@ -1,11 +1,8 @@
 import { RefObject, useRef, useState } from "react";
 import { TouchableOpacity, Text, View, StyleSheet } from "react-native";
-import { WordInfo } from "../types/Word";
-import CustomPopover from "./CustomPopover";
 import { ClickableWordProps } from "../types/Word";
 
-
-const ClickableWord = ({ word, onWordPress }: ClickableWordProps) => {
+const ClickableWord = ({ word, onWordPress, isSelected }: ClickableWordProps) => {
   const ref = useRef<View>(null);
   
   const handlePress = () => {
@@ -16,8 +13,18 @@ const ClickableWord = ({ word, onWordPress }: ClickableWordProps) => {
     <TouchableOpacity
       ref={ref}
       onPress={handlePress}
-      style={styles.wordButton}>
-      <Text style={styles.wordText}>{word.word}</Text>
+      style={[
+        styles.wordButton,
+        isSelected && styles.wordButtonSelected
+      ]}>
+
+      <Text style={[
+        styles.wordText,
+        isSelected && styles.wordTextSelected
+      ]}>
+        {word.word}
+      </Text>
+
     </TouchableOpacity>
   );
 };
@@ -35,5 +42,15 @@ const styles = StyleSheet.create({
     color: '#007AFF',
     lineHeight: 24,
   },
+  wordButtonSelected: {
+    backgroundColor: '#007AFF',
+    borderRadius: 4,
+    paddingHorizontal: 4,
+    paddingVertical: 2,
+    borderBottomWidth: 0,
+  },
+  wordTextSelected: {
+    color: 'white',
+    fontWeight: '600',
+  },
 });
-

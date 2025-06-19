@@ -1,15 +1,15 @@
 import { WordInfo } from "../types/Word";
 
 const wordInfo: WordInfo[] = [
-  { word: "The", definition: 'Definite article', type: 'Article' },
-  { word: "quick", definition: 'Moving fast or doing something in a short time', type: 'Adjective' },
-  { word: "brown", definition: 'A color between red and yellow', type: 'Adjective' },
-  { word: "fox", definition: 'A carnivorous mammal with a pointed snout', type: 'Noun' },
-  { word: "jumps", definition: 'To push oneself off a surface', type: 'Verb' },
-  { word: "over", definition: 'Extending directly upward from', type: 'Preposition' },
-  { word: "the", definition: 'Definite article', type: 'Article' },
-  { word: "lazy", definition: 'Unwilling to work or use energy', type: 'Adjective' },
-  { word: "dog", definition: 'A domesticated carnivorous mammal', type: 'Noun' },
+  { id: 0, word: "The", definition: 'Definite article', type: 'Article' },
+  { id: 1, word: "quick", definition: 'Moving fast or doing something in a short time', type: 'Adjective' },
+  { id: 2, word: "brown", definition: 'A color between red and yellow', type: 'Adjective' },
+  { id: 3, word: "fox", definition: 'A carnivorous mammal with a pointed snout', type: 'Noun' },
+  { id: 4, word: "jumps", definition: 'To push oneself off a surface', type: 'Verb' },
+  { id: 5, word: "over", definition: 'Extending directly upward from', type: 'Preposition' },
+  { id: 6, word: "the", definition: 'Definite article', type: 'Article' },
+  { id: 7, word: "lazy", definition: 'Unwilling to work or use energy', type: 'Adjective' },
+  { id: 8, word: "dog", definition: 'A domesticated carnivorous mammal', type: 'Noun' },
 ];
 
 export default wordInfo
