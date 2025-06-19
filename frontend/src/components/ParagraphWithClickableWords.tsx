@@ -63,9 +63,10 @@ const styles = StyleSheet.create({
     elevation: 3,
   },
   paragraph: {
-    flexDirection: 'row',
+    flexDirection: 'row-reverse',
     flexWrap: 'wrap',
     lineHeight: 24,
+    textAlign: 'right'
   },
   space: {
     fontSize: 16,

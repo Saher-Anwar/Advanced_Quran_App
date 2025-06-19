@@ -41,6 +41,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: '#007AFF',
     lineHeight: 24,
+    textAlign: 'right'
   },
   wordButtonSelected: {
     backgroundColor: '#007AFF',
