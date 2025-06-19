@@ -1,10 +1,13 @@
 import React from 'react';
-import ChapterScreen from './src/screens/ChapterScreen';
-import HomeScreen from './src/screens/HomeScreen';
+import { StatusBar } from 'react-native';
+import AppNavigator from './src/navigation/AppNavigator';
 
 const App = () => {
   return (
-    <HomeScreen/>
+    <>
+      <StatusBar barStyle="dark-content" />
+      <AppNavigator/>
+    </>
   )
 }
 

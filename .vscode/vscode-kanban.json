@@ -19,7 +19,9 @@
       "title": "Load a long an entire surah"
     }
   ],
-  "in-progress": [
+  "in-progress": [],
+  "testing": [],
+  "done": [
     {
       "assignedTo": {
         "name": "Saher"
@@ -28,8 +30,15 @@
       "id": "1",
       "references": [],
       "title": "Add Home Screen"
+    },
+    {
+      "assignedTo": {
+        "name": "Saher"
+      },
+      "creation_time": "2025-06-19T07:22:06.087Z",
+      "id": "4",
+      "references": [],
+      "title": "Implement navigation"
     }
-  ],
-  "testing": [],
-  "done": []
+  ]
 }
