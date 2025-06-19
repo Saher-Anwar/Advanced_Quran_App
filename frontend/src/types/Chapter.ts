@@ -5,5 +5,4 @@ export interface ChapterList {
   revelationType: string;
   numOfVerses: number;
   chapterNumber: number;
-  juzNumber: number;
 }
