@@ -1,0 +1,35 @@
+{
+  "todo": [
+    {
+      "assignedTo": {
+        "name": "Saher"
+      },
+      "creation_time": "2025-06-19T04:55:12.181Z",
+      "id": "2",
+      "references": [],
+      "title": "Add Chapter List Screen"
+    },
+    {
+      "assignedTo": {
+        "name": "Saher"
+      },
+      "creation_time": "2025-06-19T04:55:47.915Z",
+      "id": "3",
+      "references": [],
+      "title": "Load a long an entire surah"
+    }
+  ],
+  "in-progress": [
+    {
+      "assignedTo": {
+        "name": "Saher"
+      },
+      "creation_time": "2025-06-19T04:54:44.002Z",
+      "id": "1",
+      "references": [],
+      "title": "Add Home Screen"
+    }
+  ],
+  "testing": [],
+  "done": []
+}
