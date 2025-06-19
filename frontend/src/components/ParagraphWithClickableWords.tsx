@@ -37,7 +37,7 @@ const ParagraphWithClickableWords = ({ words }: { words: WordInfo[] }) => {
           </React.Fragment>
         ))}
       </View>
-      
+
       {/* Single shared popover */}
       <SharedPopover
         word={selectedWord as WordInfo}
@@ -49,27 +49,27 @@ const ParagraphWithClickableWords = ({ words }: { words: WordInfo[] }) => {
   );
 };
 
-export default ParagraphWithClickableWords
+export default ParagraphWithClickableWords;
 
 const styles = StyleSheet.create({
   paragraphContainer: {
-    backgroundColor: 'white',
+    backgroundColor: "white",
     padding: 16,
     borderRadius: 8,
-    shadowColor: '#000',
+    shadowColor: "#000",
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.1,
     shadowRadius: 4,
     elevation: 3,
   },
   paragraph: {
-    flexDirection: 'row-reverse',
-    flexWrap: 'wrap',
+    flexDirection: "row-reverse",
+    flexWrap: "wrap",
     lineHeight: 24,
-    textAlign: 'right'
+    textAlign: "right",
   },
   space: {
     fontSize: 16,
     lineHeight: 24,
   },
-})
+});
