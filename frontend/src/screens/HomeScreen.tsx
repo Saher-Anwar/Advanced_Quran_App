@@ -1,11 +1,18 @@
+import { RouteProp } from "@react-navigation/native"
 import { Button, StyleSheet, View } from "react-native"
+import { RootStackParamList } from "../navigation/navigation"
+import { useNavigation } from "../hooks/useNavigation"
 
 const HomeScreen = () => {
-    return (
+    const navigation = useNavigation()
+
+    const navigateToChapterList = () => {navigation.navigate('Chapter')}
+
+    return (    
         <View style={styles.page}>
             <View style={styles.buttonsContainer}>
                 {/* List of buttons to navigate to different screens */}
-                <Button title="ChapterList"/>
+                <Button title="Chapter" onPress={navigateToChapterList}/>
                 <Button title="Settings"/>
             </View>
         </View>
