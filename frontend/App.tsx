@@ -1,31 +1,27 @@
 import React from "react";
 import { StatusBar, StyleSheet, View } from "react-native";
-import ListItemInfo, { ListItemProps } from "./src/components/ListItemInfo";
 import ListItemComponent from "./src/components/ListItemComponent";
+import { chapters } from "./src/mock_data/list_item_data";
 
 const App = () => {
-  const listItem : ListItemProps = {name: "Al-Fatihah", revelationType: "Meccan", numOfVerses: 7, translation: "The Opening"}
-
   return (
     <>
       <StatusBar barStyle="dark-content" />
       <View style={styles.container}>
-        <ListItemComponent {...listItem}/>
-        <ListItemComponent {...listItem}/>
-        <ListItemComponent {...listItem}/>
+        <ListItemComponent {...chapters[0]} />
+        <ListItemComponent {...chapters[1]} />
+        <ListItemComponent {...chapters[2]} />
 
-        <ListItemComponent {...listItem}/>
+        <ListItemComponent {...chapters[3]} />
 
-        <ListItemComponent {...listItem}/>
+        <ListItemComponent {...chapters[4]} />
 
-        <ListItemComponent {...listItem}/>
+        <ListItemComponent {...chapters[5]} />
 
-        <ListItemComponent {...listItem}/>
+        <ListItemComponent {...chapters[6]} />
 
-        <ListItemComponent {...listItem}/>
-
+        <ListItemComponent {...chapters[7]} />
       </View>
-      
     </>
   );
 };
@@ -36,6 +32,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingVertical: 50,
-    backgroundColor: 'gray',
+    backgroundColor: "gray",
   },
 });

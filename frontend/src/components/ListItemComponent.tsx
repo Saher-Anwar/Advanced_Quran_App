@@ -1,8 +1,9 @@
 import { StyleSheet, View, Text } from "react-native";
 import NumberSymbol from "./NumberSymbol";
-import ListItemInfo, { ListItemProps } from "./ListItemInfo";
+import { ChapterListItemData } from "../types/Chapter";
+import ListItemInfo from "./ListItemInfo";
 
-const ListItemComponent = (listItemInfo: ListItemProps) => {
+const ListItemComponent = (listItemInfo: ChapterListItemData) => {
   return (
     <View style={styles.container}>
       <View style={styles.symbolContainer}>

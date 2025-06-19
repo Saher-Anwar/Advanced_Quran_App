@@ -1,8 +1,8 @@
-export interface ChapterList {
+export interface ChapterListItemData {
   name: string;
   arabicName: string;
   translation: string;
-  revelationType: string;
+  revelationType: 'Meccan' | 'Medinan';
   numOfVerses: number;
   chapterNumber: number;
 }
