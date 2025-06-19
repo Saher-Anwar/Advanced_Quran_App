@@ -12,8 +12,7 @@ const SharedPopover = ({ word, anchorRef, isVisible, onClose }: SharedPopoverPro
       from={anchorRef as RefObject<View>}
       onRequestClose={onClose}
       placement={PopoverPlacement.BOTTOM}
-      displayArea={{ x: 0, y: 0, width: 1000, height: 1000 }}
-      popoverStyle={{ marginTop: 10 }}
+      displayArea={{ x: 10, y: 50, width: 350, height: 600 }}
       >
       <View style={styles.popoverContent}>
         <Text style={styles.popoverTitle}>{word.word}</Text>
@@ -33,7 +32,7 @@ export default SharedPopover
 const styles = StyleSheet.create({
   popoverContent: {
     padding: 16,
-    maxWidth: 300,
+    maxWidth: 280,
     backgroundColor: 'white',
     direction: 'ltr'
   },
