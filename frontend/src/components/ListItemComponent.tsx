@@ -28,19 +28,18 @@ const styles = StyleSheet.create({
     margin: 10,
   },
   symbolContainer: {
-    flex: 2,
+    width: "10%",
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "red",
   },
   listItemInfoContainer: {
-    flexGrow: 4,
-    flexShrink: 0,
+    width: "60%",
     backgroundColor: "yellow",
     paddingHorizontal: 10,
   },
   translationContainer: {
-    flex: 4,
+    width: "30%",
     backgroundColor: "gray",
     paddingHorizontal: 5,
   },

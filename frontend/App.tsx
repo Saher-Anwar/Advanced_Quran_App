@@ -1,24 +1,10 @@
 import React from "react";
-import { StatusBar, StyleSheet, View } from "react-native";
-import ListItemComponent from "./src/components/ListItemComponent";
+import { StyleSheet } from "react-native";
 import { chapters } from "./src/mock_data/list_item_data";
+import ChapterListScreen from "./src/screens/ChapterListScreen";
 
 const App = () => {
-  return (
-    <>
-      <StatusBar barStyle="dark-content" />
-      <View style={styles.container}>
-        <ListItemComponent {...chapters[0]} />
-        <ListItemComponent {...chapters[1]} />
-        <ListItemComponent {...chapters[2]} />
-        <ListItemComponent {...chapters[3]} />
-        <ListItemComponent {...chapters[4]} />
-        <ListItemComponent {...chapters[5]} />
-        <ListItemComponent {...chapters[6]} />
-        <ListItemComponent {...chapters[7]} />
-      </View>
-    </>
-  );
+  return <ChapterListScreen chapters={[...chapters]} />;
 };
 
 export default App;
