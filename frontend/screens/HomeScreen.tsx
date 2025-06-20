@@ -1,6 +1,7 @@
 import { Button, View, Text, ImageBackground, ScrollView, TouchableOpacity } from 'react-native';
 import { useNavigation } from '../hooks/useNavigation';
 import { LinearGradient } from 'expo-linear-gradient';
+import PageTitle from 'components/PageTitle';
 
 const HomeScreen = () => {
   const navigation = useNavigation();
@@ -13,19 +14,17 @@ const HomeScreen = () => {
     <View className="flex-1">
       {/* Background with Islamic geometric pattern */}
       <LinearGradient
-        colors={['#DC2626', '#7F1D1D', '#FFD700']}
+        colors={['#1F1F1F', '#0D0D0D']}
         start={{ x: 0, y: 0 }}
         end={{ x: 1, y: 1 }}
         className="flex-1">
         <ScrollView className="flex-1" showsVerticalScrollIndicator={false}>
           {/* Header Section */}
-          <View className="px-6 pb-8 pt-16">
-            <Text className="mb-2 text-center text-4xl font-bold text-white">القرآن الكريم</Text>
-            <Text className="text-center text-lg font-light text-white/80">The Holy Quran</Text>
-            <Text className="mt-2 text-center text-sm text-white/60">
-              "And We have made the Quran easy for remembrance"
-            </Text>
-          </View>
+          <PageTitle
+            title={'الكريم القرآن'}
+            subtitle={'The Holy Quran'}
+            quote={'\"And We have made the Quran easy for remembrance\"'}
+          />
 
           {/* Prayer Times Card */}
           <View className="mx-6 mb-6 rounded-2xl border border-white/20 bg-white/10 p-4 backdrop-blur-sm">
