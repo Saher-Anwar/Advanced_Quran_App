@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View } from "react-native";
-import { ListItemDataProp } from "../types/Chapter";
+import { ListItemDataProp } from "../../types/Chapter";
 
 const ListItemInfo = ({
   name,

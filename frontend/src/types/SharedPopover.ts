@@ -1,6 +1,6 @@
 import { RefObject } from "react";
-import { WordInfo } from "./Word";
-import { View, TouchableOpacity } from "react-native";
+import { WordInfo } from "../types/Word";
+import { View } from "react-native";
 
 export interface SharedPopoverProps {
   word: WordInfo;

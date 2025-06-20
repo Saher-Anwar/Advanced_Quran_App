@@ -1,7 +1,7 @@
 import React from "react";
 import { FlatList, StyleSheet } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
-import ListItemComponent from "../components/ListItemComponent";
+import ListItemComponent from "../components/ListItem/ListItemComponent";
 import { listOfChapters } from "../mock_data/list_item_data";
 import { useNavigation } from "../hooks/useNavigation";
 

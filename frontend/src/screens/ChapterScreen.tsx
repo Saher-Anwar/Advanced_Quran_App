@@ -1,12 +1,12 @@
 import { View, Text, StyleSheet } from "react-native";
-import ParagraphWithClickableWords from "../components/ParagraphWithClickableWords";
+import ClickableWordsParagraph from "../components/word/ClickableWordsParagraph";
 import arabicWordInfo from "../mock_data/arabic_word_data";
 
 const ChapterScreen = () => {
   return (
     <View style={styles.appContainer}>
       <Text style={styles.title}>Clickable Paragraph</Text>
-      <ParagraphWithClickableWords words={arabicWordInfo} />
+      <ClickableWordsParagraph words={arabicWordInfo} />
     </View>
   );
 };
