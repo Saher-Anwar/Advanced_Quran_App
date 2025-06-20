@@ -2,6 +2,8 @@ import { Button, View, Text, ImageBackground, ScrollView, TouchableOpacity } fro
 import { useNavigation } from '../hooks/useNavigation';
 import { LinearGradient } from 'expo-linear-gradient';
 import PageTitle from 'components/PageTitle';
+import PrayerTimesCard from 'components/PrayerTimesCard';
+import prayerTimeInfo from 'mock_data/prayer_time_info';
 
 const HomeScreen = () => {
   const navigation = useNavigation();
@@ -27,31 +29,15 @@ const HomeScreen = () => {
           />
 
           {/* Prayer Times Card */}
-          <View className="mx-6 mb-6 rounded-2xl border border-white/20 bg-white/10 p-4 backdrop-blur-sm">
-            <Text className="mb-3 text-lg font-semibold text-white">Today's Prayer Times</Text>
-            <View className="flex-row justify-between">
-              <View className="items-center">
-                <Text className="text-xs text-white/80">Fajr</Text>
-                <Text className="font-bold text-white">5:30</Text>
-              </View>
-              <View className="items-center">
-                <Text className="text-xs text-white/80">Dhuhr</Text>
-                <Text className="font-bold text-white">12:45</Text>
-              </View>
-              <View className="items-center">
-                <Text className="text-xs text-white/80">Asr</Text>
-                <Text className="font-bold text-white">4:20</Text>
-              </View>
-              <View className="items-center">
-                <Text className="text-xs text-white/80">Maghrib</Text>
-                <Text className="font-bold text-white">7:15</Text>
-              </View>
-              <View className="items-center">
-                <Text className="text-xs text-white/80">Isha</Text>
-                <Text className="font-bold text-white">8:45</Text>
-              </View>
-            </View>
-          </View>
+          <PrayerTimesCard
+            cardTitle={prayerTimeInfo.cardTitle}
+            fajr={prayerTimeInfo.fajr}
+            sunrise={prayerTimeInfo.sunrise}
+            dhuhr={prayerTimeInfo.dhuhr}
+            asr={prayerTimeInfo.asr}
+            maghreb={prayerTimeInfo.maghreb}
+            isha={prayerTimeInfo.isha}
+          />
 
           {/* Main Action Cards */}
           <View className="space-y-4 px-6">
