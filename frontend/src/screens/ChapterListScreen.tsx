@@ -3,14 +3,23 @@ import { FlatList, StyleSheet } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import ListItemComponent from "../components/ListItemComponent";
 import { listOfChapters } from "../mock_data/list_item_data";
+import { useNavigation } from "../hooks/useNavigation";
 
 const ChapterListScreen = () => {
+  const navigation = useNavigation();
+
+  const navigateToChapterScreen = () => {
+    navigation.navigate("Chapter");
+  };
+
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.container}>
         <FlatList
           data={listOfChapters}
-          renderItem={({ item }) => <ListItemComponent {...item} />}
+          renderItem={({ item }) => (
+            <ListItemComponent {...item} onPress={navigateToChapterScreen} />
+          )}
           keyExtractor={(item) => item.name}
         />
       </SafeAreaView>

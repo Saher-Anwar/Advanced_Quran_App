@@ -1,11 +1,11 @@
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View, Text, TouchableOpacity } from "react-native";
 import NumberSymbol from "./NumberSymbol";
 import { ChapterListItemProp } from "../types/Chapter";
 import ListItemInfo from "./ListItemInfo";
 
 const ListItemComponent = (listItemInfo: ChapterListItemProp) => {
   return (
-    <View style={styles.container}>
+    <TouchableOpacity style={styles.container} onPress={listItemInfo.onPress}>
       <View style={styles.symbolContainer}>
         <NumberSymbol number={listItemInfo.chapterNumber} />
       </View>
@@ -15,7 +15,7 @@ const ListItemComponent = (listItemInfo: ChapterListItemProp) => {
       <View style={styles.translationContainer}>
         <Text style={styles.translationText}>{listItemInfo.translation}</Text>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 

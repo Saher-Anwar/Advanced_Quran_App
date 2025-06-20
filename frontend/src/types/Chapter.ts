@@ -5,4 +5,5 @@ export interface ChapterListItemProp {
   revelationType: "Meccan" | "Medinan";
   numOfVerses: number;
   chapterNumber: number;
+  onPress: () => void;
 }
