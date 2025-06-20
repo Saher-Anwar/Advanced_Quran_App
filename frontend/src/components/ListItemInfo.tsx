@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View } from "react-native";
-import { ChapterListItemData } from "../types/Chapter";
+import { ChapterListItemProp } from "../types/Chapter";
 
 const ListItemInfo = ({
   name,
@@ -8,7 +8,7 @@ const ListItemInfo = ({
   revelationType,
   numOfVerses,
   chapterNumber,
-}: ChapterListItemData) => {
+}: ChapterListItemProp) => {
   return (
     <View style={styles.container}>
       <Text style={styles.nameText}>{name}</Text>
