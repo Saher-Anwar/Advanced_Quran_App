@@ -1,6 +1,6 @@
-import { ChapterListItemProp } from "../types/Chapter";
+import { ListItemDataProp } from "../types/Chapter";
 
-export const listOfChapters: ChapterListItemProp[] = [
+export const listOfChapters: ListItemDataProp[] = [
   {
     chapterNumber: 1,
     name: "Al-Fatihah",

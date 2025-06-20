@@ -18,7 +18,7 @@ const ChapterListScreen = () => {
         <FlatList
           data={listOfChapters}
           renderItem={({ item }) => (
-            <ListItemComponent {...item} onPress={navigateToChapterScreen} />
+            <ListItemComponent onPress={navigateToChapterScreen} data={item} />
           )}
           keyExtractor={(item) => item.name}
         />

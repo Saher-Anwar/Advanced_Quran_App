@@ -1,19 +1,24 @@
 import { StyleSheet, View, Text, TouchableOpacity } from "react-native";
 import NumberSymbol from "./NumberSymbol";
-import { ChapterListItemProp } from "../types/Chapter";
+import { ListItemComponentProp, ListItemDataProp } from "../types/Chapter";
 import ListItemInfo from "./ListItemInfo";
 
-const ListItemComponent = (listItemInfo: ChapterListItemProp) => {
+const ListItemComponent = (listItemComponentInfo: ListItemComponentProp) => {
   return (
-    <TouchableOpacity style={styles.container} onPress={listItemInfo.onPress}>
+    <TouchableOpacity
+      style={styles.container}
+      onPress={listItemComponentInfo.onPress}
+    >
       <View style={styles.symbolContainer}>
-        <NumberSymbol number={listItemInfo.chapterNumber} />
+        <NumberSymbol number={listItemComponentInfo.data.chapterNumber} />
       </View>
       <View style={styles.listItemInfoContainer}>
-        <ListItemInfo {...listItemInfo}></ListItemInfo>
+        <ListItemInfo {...listItemComponentInfo.data}></ListItemInfo>
       </View>
       <View style={styles.translationContainer}>
-        <Text style={styles.translationText}>{listItemInfo.translation}</Text>
+        <Text style={styles.translationText}>
+          {listItemComponentInfo.data.translation}
+        </Text>
       </View>
     </TouchableOpacity>
   );
