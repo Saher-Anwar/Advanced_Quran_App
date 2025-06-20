@@ -13,7 +13,7 @@ const HomeScreen = () => {
     <View className="flex-1">
       {/* Background with Islamic geometric pattern */}
       <LinearGradient
-        colors={['#0F4C3A', '#1FAB89', '#2ECC71']}
+        colors={['#DC2626', '#7F1D1D', '#FFD700']}
         start={{ x: 0, y: 0 }}
         end={{ x: 1, y: 1 }}
         className="flex-1">
