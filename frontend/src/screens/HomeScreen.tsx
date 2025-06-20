@@ -1,13 +1,12 @@
-import { RouteProp } from "@react-navigation/native";
 import { Button, StyleSheet, View } from "react-native";
-import { RootStackParamList } from "../navigation/navigation";
 import { useNavigation } from "../hooks/useNavigation";
+import { chapters } from "../mock_data/list_item_data";
 
 const HomeScreen = () => {
   const navigation = useNavigation();
 
   const navigateToChapterList = () => {
-    navigation.navigate("Chapter");
+    navigation.navigate("ChapterList", { chapters: chapters });
   };
 
   return (

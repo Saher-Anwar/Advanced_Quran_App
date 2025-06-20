@@ -1,6 +1,6 @@
-import { ChapterListItemData } from "../types/Chapter";
+import { ChapterListItemData, ChaptersList } from "../types/Chapter";
 
-export const chapters: ChapterListItemData[] = [
+const listOfChapters: ChapterListItemData[] = [
   {
     chapterNumber: 1,
     name: "Al-Fatihah",
@@ -242,3 +242,5 @@ export const chapters: ChapterListItemData[] = [
     translation: "The Romans",
   },
 ];
+
+export const chapters: ChaptersList = { chapters: listOfChapters };
