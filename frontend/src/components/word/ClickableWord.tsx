@@ -1,6 +1,6 @@
-import { RefObject, useRef, useState } from "react";
+import { RefObject, useRef } from "react";
 import { TouchableOpacity, Text, View, StyleSheet } from "react-native";
-import { ClickableWordProps } from "../types/Word";
+import { ClickableWordProps } from "../../types/Word";
 
 const ClickableWord = ({
   word,

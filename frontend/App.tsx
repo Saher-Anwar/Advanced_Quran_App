@@ -1,10 +1,9 @@
 import React from "react";
 import { StyleSheet } from "react-native";
-import { chapters } from "./src/mock_data/list_item_data";
-import ChapterListScreen from "./src/screens/ChapterListScreen";
+import AppNavigator from "./src/navigation/AppNavigator";
 
 const App = () => {
-  return <ChapterListScreen chapters={[...chapters]} />;
+  return <AppNavigator />;
 };
 
 export default App;

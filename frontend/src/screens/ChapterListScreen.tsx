@@ -1,21 +1,25 @@
 import React from "react";
-import { FlatList, StatusBar, StyleSheet, View } from "react-native";
+import { FlatList, StyleSheet } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
-import ListItemComponent from "../components/ListItemComponent";
-import { chapters } from "../mock_data/list_item_data";
-import { ChapterListItemData } from "../types/Chapter";
+import ListItemComponent from "../components/ListItem/ListItemComponent";
+import { listOfChapters } from "../mock_data/list_item_data";
+import { useNavigation } from "../hooks/useNavigation";
 
-interface ChaptersList {
-  chapters: ChapterListItemData[];
-}
+const ChapterListScreen = () => {
+  const navigation = useNavigation();
 
-const ChapterListScreen = ({ chapters }: ChaptersList) => {
+  const navigateToChapterScreen = () => {
+    navigation.navigate("Chapter");
+  };
+
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.container}>
         <FlatList
-          data={chapters}
-          renderItem={({ item }) => <ListItemComponent {...item} />}
+          data={listOfChapters}
+          renderItem={({ item }) => (
+            <ListItemComponent onPress={navigateToChapterScreen} data={item} />
+          )}
           keyExtractor={(item) => item.name}
         />
       </SafeAreaView>

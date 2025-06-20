@@ -6,7 +6,7 @@ import {
   View,
   Text,
 } from "react-native";
-import { SharedPopoverProps } from "../types/SharedPopover";
+import { SharedPopoverProps } from "../../types/SharedPopover";
 import { RefObject } from "react";
 
 const SharedPopover = ({

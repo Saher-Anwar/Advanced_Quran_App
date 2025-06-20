@@ -1,11 +1,11 @@
 import { RefObject, useState } from "react";
-import { WordInfo } from "../types/Word";
+import { WordInfo } from "../../types/Word";
 import { View, Text, StyleSheet } from "react-native";
 import SharedPopover from "./SharedPopover";
 import ClickableWord from "./ClickableWord";
 import React from "react";
 
-const ParagraphWithClickableWords = ({ words }: { words: WordInfo[] }) => {
+const ClickableWordsParagraph = ({ words }: { words: WordInfo[] }) => {
   const [selectedWord, setSelectedWord] = useState<WordInfo | null>(null);
   const [anchorRef, setAnchorRef] = useState<RefObject<View> | null>(null);
   const [isPopoverVisible, setIsPopoverVisible] = useState(false);
@@ -49,7 +49,7 @@ const ParagraphWithClickableWords = ({ words }: { words: WordInfo[] }) => {
   );
 };
 
-export default ParagraphWithClickableWords;
+export default ClickableWordsParagraph;
 
 const styles = StyleSheet.create({
   paragraphContainer: {
