@@ -8,7 +8,14 @@ module.exports = {
 
   presets: [require('nativewind/preset')],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        quranGreen: '#1FAB89',
+      },
+      fontFamily: {
+        arabic: ['Amiri', 'serif']
+      }
+    },
   },
   plugins: [],
 };
