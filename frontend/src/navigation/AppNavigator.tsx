@@ -4,21 +4,22 @@ import { NavigationContainer } from "@react-navigation/native";
 import HomeScreen from "../screens/HomeScreen";
 import ChapterScreen from "../screens/ChapterScreen";
 
-const Stack = createNativeStackNavigator<RootStackParamList>()
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 const AppNavigator = () => {
-    return (
-        <NavigationContainer>
-            <Stack.Navigator
-              initialRouteName="Home"
-              screenOptions={{
-                headerShown: true
-              }}>
-                <Stack.Screen name="Home" component={HomeScreen}/>
-                <Stack.Screen name="Chapter" component={ChapterScreen}/>
-            </Stack.Navigator>
-        </NavigationContainer>
-    )
-}
+  return (
+    <NavigationContainer>
+      <Stack.Navigator
+        initialRouteName="Home"
+        screenOptions={{
+          headerShown: true,
+        }}
+      >
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Chapter" component={ChapterScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+};
 
-export default AppNavigator
+export default AppNavigator;
