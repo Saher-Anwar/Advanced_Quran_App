@@ -5,6 +5,7 @@ import PageTitle from 'components/PageTitle';
 import PrayerTimesCard from 'components/PrayerTimesCard';
 import prayerTimeInfo from 'mock_data/prayer_time_info';
 import CustomListItem from 'components/CustomListItem';
+import ProgressBar from 'components/ProgressBar';
 
 const HomeScreen = () => {
   const navigation = useNavigation();
@@ -55,9 +56,7 @@ const HomeScreen = () => {
               </View>
               <Text className="mb-2 text-base text-white/80">Surah Al-Fatiha</Text>
               <Text className="text-sm text-white/60">The Opening • Verse 7</Text>
-              <View className="mt-3 h-2 rounded-full bg-white/10">
-                <View className="h-2 w-1/4 rounded-full bg-white/60"></View>
-              </View>
+              <ProgressBar progressAmount={33} />
             </View>
 
             {/* Quick Actions Grid */}
