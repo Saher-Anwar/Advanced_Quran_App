@@ -6,6 +6,7 @@ import PrayerTimesCard from 'components/PrayerTimesCard';
 import prayerTimeInfo from 'mock_data/prayer_time_info';
 import CustomListItem from 'components/CustomListItem';
 import ProgressBar from 'components/ProgressBar';
+import QuickActionsGrid from 'components/QuickActionsGrid';
 
 const HomeScreen = () => {
   const navigation = useNavigation();
@@ -45,47 +46,19 @@ const HomeScreen = () => {
           <View className="space-y-4 px-6">
             {/* Read Quran Card */}
             <CustomListItem title={"Read the Qur'an"} icon={'📖'} onPress={navigateToChapterList} />
-
-            {/* Quick Actions Grid */}
-            <View className="flex-row space-x-4">
-              <TouchableOpacity className="flex-1 items-center rounded-2xl border border-white/20 bg-white/10 p-4 backdrop-blur-sm">
-                <Text className="mb-2 text-2xl text-white">🕌</Text>
-                <Text className="text-sm font-medium text-white">Qibla</Text>
-              </TouchableOpacity>
-
-              <TouchableOpacity className="flex-1 items-center rounded-2xl border border-white/20 bg-white/10 p-4 backdrop-blur-sm">
-                <Text className="mb-2 text-2xl text-white">📿</Text>
-                <Text className="text-sm font-medium text-white">Tasbih</Text>
-              </TouchableOpacity>
-
-              <TouchableOpacity className="flex-1 items-center rounded-2xl border border-white/20 bg-white/10 p-4 backdrop-blur-sm">
-                <Text className="mb-2 text-2xl text-white">🤲</Text>
-                <Text className="text-sm font-medium text-white">Duas</Text>
-              </TouchableOpacity>
-            </View>
-
             {/* Settings Card */}
-            <TouchableOpacity className="rounded-2xl border border-white/20 bg-white/10 p-4 backdrop-blur-sm">
-              <View className="flex-row items-center justify-between">
-                <View className="flex-row items-center">
-                  <View className="mr-3 rounded-full bg-white/20 p-2">
-                    <Text className="text-lg text-white">⚙️</Text>
-                  </View>
-                  <Text className="text-lg font-medium text-white">Settings</Text>
-                </View>
-                <Text className="text-white/60">›</Text>
-              </View>
-            </TouchableOpacity>
+            <CustomListItem title={'Settings'} icon="⚙️" onPress={() => {}} />
           </View>
 
           {/* Bottom Quote */}
           <View className="mt-4 px-6 py-8">
             <View className="rounded-2xl border border-white/10 bg-white/5 p-6">
               <Text className="mb-2 text-center text-base italic text-white/80">
-                "وَنُنَزِّلُ مِنَ الْقُرْآنِ مَا هُوَ شِفَاءٌ وَرَحْمَةٌ لِّلْمُؤْمِنِينَ"
+                وَنُنَزِّلُ مِنَ الْقُرْآنِ مَا هُوَ شِفَاءٌ وَرَحْمَةٌ لِّلْمُؤْمِنِينَ&quot;
               </Text>
               <Text className="text-center text-sm text-white/60">
-                "And We send down of the Quran that which is healing and mercy for the believers"
+                And We send down of the Quran that which is healing and mercy for the
+                believers&quot;
               </Text>
               <Text className="mt-2 text-center text-xs text-white/40">Surah Al-Isra 17:82</Text>
             </View>
