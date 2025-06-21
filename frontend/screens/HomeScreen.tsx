@@ -1,4 +1,4 @@
-import { View, Text, ScrollView } from 'react-native';
+import { View, ScrollView } from 'react-native';
 import { useNavigation } from '../hooks/useNavigation';
 import { LinearGradient } from 'expo-linear-gradient';
 import PageTitle from 'components/PageTitle';
