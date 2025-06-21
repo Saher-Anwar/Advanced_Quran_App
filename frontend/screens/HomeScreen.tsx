@@ -4,6 +4,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import PageTitle from 'components/PageTitle';
 import PrayerTimesCard from 'components/PrayerTimesCard';
 import prayerTimeInfo from 'mock_data/prayer_time_info';
+import CustomListItem from 'components/CustomListItem';
 
 const HomeScreen = () => {
   const navigation = useNavigation();
@@ -42,23 +43,10 @@ const HomeScreen = () => {
           {/* Main Action Cards */}
           <View className="space-y-4 px-6">
             {/* Read Quran Card */}
-            <TouchableOpacity
-              onPress={navigateToChapterList}
-              className="rounded-2xl border border-white/20 bg-white/15 p-6 backdrop-blur-sm active:bg-white/20">
-              <View className="flex-row items-center">
-                <View className="mr-4 rounded-full bg-white/20 p-3">
-                  <Text className="text-2xl text-white">📖</Text>
-                </View>
-                <View className="flex-1">
-                  <Text className="text-xl font-bold text-white">Read Quran</Text>
-                  <Text className="text-sm text-white/70">Continue your recitation</Text>
-                </View>
-                <Text className="text-white/60">›</Text>
-              </View>
-            </TouchableOpacity>
+            <CustomListItem title={"Read the Qur'an"} icon={'📖'} onPress={navigateToChapterList} />
 
             {/* Last Read Card */}
-            <View className="rounded-2xl border border-white/20 bg-white/10 p-6 backdrop-blur-sm">
+            <View className="rounded-2xl border border-white/20 bg-white/15 p-6 backdrop-blur-sm">
               <View className="mb-3 flex-row items-center">
                 <View className="mr-3 rounded-full bg-white/20 p-2">
                   <Text className="text-lg text-white">📑</Text>
