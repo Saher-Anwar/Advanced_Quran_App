@@ -4,6 +4,7 @@ import { View, FlatList, ListRenderItem, SafeAreaView, StatusBar } from 'react-n
 import { Appbar, Text, Menu, Searchbar } from 'react-native-paper';
 import { useSearch } from '../hooks/useSearch';
 import SurahCard, { Surah, SurahListProps } from 'components/SurahCard';
+import SearchHeader from 'components/SearchHeader';
 
 type SortOption = 'number' | 'name' | 'verses';
 
@@ -32,29 +33,6 @@ const SAMPLE_SURAHS: readonly Surah[] = [
   { id: 9, number: 9, name: 'At-Tawbah', nameArabic: 'التوبة', verses: 129 },
   { id: 10, number: 10, name: 'Yunus', nameArabic: 'يونس', verses: 109 },
 ] as const;
-
-const SearchHeader: React.FC<{
-  readonly searchQuery: string;
-  readonly onSearchChange: (query: string) => void;
-  readonly onClose: () => void;
-}> = ({ searchQuery, onSearchChange, onClose }) => (
-  <View className="flex-1 flex-row items-center px-2">
-    <Searchbar
-      placeholder="Search surahs..."
-      onChangeText={onSearchChange}
-      value={searchQuery}
-      className="mx-2 flex-1"
-      inputStyle={{ fontSize: 16 }}
-      autoFocus
-    />
-    <Appbar.Action
-      icon="close"
-      iconColor="white"
-      onPress={onClose}
-      accessibilityLabel="Close search"
-    />
-  </View>
-);
 
 const SortMenu: React.FC<{
   readonly visible: boolean;
