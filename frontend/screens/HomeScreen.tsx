@@ -5,6 +5,7 @@ import PageTitle from 'components/PageTitle';
 import PrayerTimesCard from 'components/PrayerTimesCard';
 import prayerTimeInfo from 'mock_data/prayer_time_info';
 import CustomListItem from 'components/CustomListItem';
+import Footer from 'components/Footer';
 
 const HomeScreen = () => {
   const navigation = useNavigation();
@@ -49,18 +50,13 @@ const HomeScreen = () => {
           </View>
 
           {/* Bottom Quote */}
-          <View className="mt-4 px-6 py-8">
-            <View className="rounded-2xl border border-white/10 bg-white/5 p-6">
-              <Text className="mb-2 text-center text-base italic text-white/80">
-                وَنُنَزِّلُ مِنَ الْقُرْآنِ مَا هُوَ شِفَاءٌ وَرَحْمَةٌ لِّلْمُؤْمِنِينَ&quot;
-              </Text>
-              <Text className="text-center text-sm text-white/60">
-                And We send down of the Quran that which is healing and mercy for the
-                believers&quot;
-              </Text>
-              <Text className="mt-2 text-center text-xs text-white/40">Surah Al-Isra 17:82</Text>
-            </View>
-          </View>
+          <Footer
+            quote={'وَنُنَزِّلُ مِنَ الْقُرْآنِ مَا هُوَ شِفَاءٌ وَرَحْمَةٌ لِّلْمُؤْمِنِين'}
+            translation={
+              'And We send down of the Quran that which is healing and mercy for the believers'
+            }
+            reference={'Surah Al-Isra 17:82'}
+          />
         </ScrollView>
       </LinearGradient>
     </View>
