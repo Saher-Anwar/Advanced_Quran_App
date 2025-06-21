@@ -6,20 +6,7 @@ import { useSearch } from '../hooks/useSearch';
 import SurahCard, { Surah, SurahListProps } from 'components/SurahCard';
 import SearchHeader from 'components/SearchHeader';
 import SortMenu, { SortOption } from 'components/SortMenu';
-
-// Sample data - replace with your actual data source
-const SAMPLE_SURAHS: readonly Surah[] = [
-  { id: 1, number: 1, name: 'Al-Fatiha', nameArabic: 'الفاتحة', verses: 7 },
-  { id: 2, number: 2, name: 'Al-Baqarah', nameArabic: 'البقرة', verses: 286 },
-  { id: 3, number: 3, name: 'Ali Imran', nameArabic: 'آل عمران', verses: 200 },
-  { id: 4, number: 4, name: 'An-Nisa', nameArabic: 'النساء', verses: 176 },
-  { id: 5, number: 5, name: 'Al-Maidah', nameArabic: 'المائدة', verses: 120 },
-  { id: 6, number: 6, name: 'Al-Anam', nameArabic: 'الأنعام', verses: 165 },
-  { id: 7, number: 7, name: 'Al-Araf', nameArabic: 'الأعراف', verses: 206 },
-  { id: 8, number: 8, name: 'Al-Anfal', nameArabic: 'الأنفال', verses: 75 },
-  { id: 9, number: 9, name: 'At-Tawbah', nameArabic: 'التوبة', verses: 129 },
-  { id: 10, number: 10, name: 'Yunus', nameArabic: 'يونس', verses: 109 },
-] as const;
+import { SAMPLE_SURAHS } from 'mock_data/list_item_data';
 
 const SearchResultsInfo: React.FC<{
   readonly searchQuery: string;
