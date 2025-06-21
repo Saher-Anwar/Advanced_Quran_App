@@ -1,5 +1,5 @@
 import { useState, useMemo } from 'react';
-import { Surah } from '../screens/ChapterListScreen';
+import { Surah } from 'components/SurahCard';
 
 // Custom hooks
 export const useSearch = (items: readonly Surah[]) => {

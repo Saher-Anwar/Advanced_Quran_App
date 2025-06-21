@@ -1,17 +1,9 @@
 import { useSort } from 'hooks/useSort';
 import React, { useState, useCallback } from 'react';
 import { View, FlatList, ListRenderItem, SafeAreaView, StatusBar } from 'react-native';
-import { Appbar, Card, Text, Menu, Searchbar } from 'react-native-paper';
+import { Appbar, Text, Menu, Searchbar } from 'react-native-paper';
 import { useSearch } from '../hooks/useSearch';
-
-// Types
-interface Surah {
-  readonly id: number;
-  readonly number: number;
-  readonly name: string;
-  readonly nameArabic: string;
-  readonly verses: number;
-}
+import SurahCard, { Surah, SurahListProps } from 'components/SurahCard';
 
 type SortOption = 'number' | 'name' | 'verses';
 
@@ -40,49 +32,6 @@ const SAMPLE_SURAHS: readonly Surah[] = [
   { id: 9, number: 9, name: 'At-Tawbah', nameArabic: 'التوبة', verses: 129 },
   { id: 10, number: 10, name: 'Yunus', nameArabic: 'يونس', verses: 109 },
 ] as const;
-
-// Props interface
-interface SurahListProps {
-  readonly surahs?: readonly Surah[];
-  readonly onSurahPress?: (surah: Surah) => void;
-}
-
-// Components
-const SurahCard: React.FC<{
-  readonly surah: Surah;
-  readonly onPress?: (surah: Surah) => void;
-}> = React.memo(({ surah, onPress }) => {
-  const handlePress = useCallback(() => {
-    onPress?.(surah);
-  }, [surah, onPress]);
-
-  return (
-    <Card className="elevation-2 mx-4 mb-3" onPress={handlePress}>
-      <Card.Content className="py-4">
-        <View className="flex-row items-center justify-between">
-          <View className="flex-1">
-            <Text variant="titleMedium" className="font-semibold text-gray-800">
-              {surah.number}. {surah.name}
-            </Text>
-            <Text variant="bodyMedium" className="mt-1 text-gray-600">
-              {surah.nameArabic}
-            </Text>
-            <Text variant="bodySmall" className="mt-1 text-gray-500">
-              {surah.verses} {surah.verses === 1 ? 'verse' : 'verses'}
-            </Text>
-          </View>
-          <View className="h-12 w-12 items-center justify-center rounded-full bg-green-100">
-            <Text variant="labelLarge" className="font-bold text-green-700">
-              {surah.number}
-            </Text>
-          </View>
-        </View>
-      </Card.Content>
-    </Card>
-  );
-});
-
-SurahCard.displayName = 'SurahCard';
 
 const SearchHeader: React.FC<{
   readonly searchQuery: string;
