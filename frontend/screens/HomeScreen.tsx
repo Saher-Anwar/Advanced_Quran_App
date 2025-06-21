@@ -46,19 +46,6 @@ const HomeScreen = () => {
             {/* Read Quran Card */}
             <CustomListItem title={"Read the Qur'an"} icon={'📖'} onPress={navigateToChapterList} />
 
-            {/* Last Read Card */}
-            <View className="rounded-2xl border border-white/20 bg-white/15 p-6 backdrop-blur-sm">
-              <View className="mb-3 flex-row items-center">
-                <View className="mr-3 rounded-full bg-white/20 p-2">
-                  <Text className="text-lg text-white">📑</Text>
-                </View>
-                <Text className="text-lg font-semibold text-white">Last Read</Text>
-              </View>
-              <Text className="mb-2 text-base text-white/80">Surah Al-Fatiha</Text>
-              <Text className="text-sm text-white/60">The Opening • Verse 7</Text>
-              <ProgressBar progressAmount={33} />
-            </View>
-
             {/* Quick Actions Grid */}
             <View className="flex-row space-x-4">
               <TouchableOpacity className="flex-1 items-center rounded-2xl border border-white/20 bg-white/10 p-4 backdrop-blur-sm">
