@@ -1,12 +1,10 @@
-import { Button, View, Text, ImageBackground, ScrollView, TouchableOpacity } from 'react-native';
+import { View, Text, ScrollView } from 'react-native';
 import { useNavigation } from '../hooks/useNavigation';
 import { LinearGradient } from 'expo-linear-gradient';
 import PageTitle from 'components/PageTitle';
 import PrayerTimesCard from 'components/PrayerTimesCard';
 import prayerTimeInfo from 'mock_data/prayer_time_info';
 import CustomListItem from 'components/CustomListItem';
-import ProgressBar from 'components/ProgressBar';
-import QuickActionsGrid from 'components/QuickActionsGrid';
 
 const HomeScreen = () => {
   const navigation = useNavigation();
