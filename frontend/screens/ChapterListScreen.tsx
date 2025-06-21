@@ -1,6 +1,8 @@
-import React, { useState, useMemo, useCallback } from 'react';
+import { useSort } from 'hooks/useSort';
+import React, { useState, useCallback } from 'react';
 import { View, FlatList, ListRenderItem, SafeAreaView, StatusBar } from 'react-native';
 import { Appbar, Card, Text, Menu, Searchbar } from 'react-native-paper';
+import { useSearch } from '../hooks/useSearch';
 
 // Types
 interface Surah {
@@ -44,53 +46,6 @@ interface SurahListProps {
   readonly surahs?: readonly Surah[];
   readonly onSurahPress?: (surah: Surah) => void;
 }
-
-// Custom hooks
-const useSearch = (items: readonly Surah[]) => {
-  const [searchQuery, setSearchQuery] = useState<string>('');
-
-  const filteredItems = useMemo(() => {
-    if (!searchQuery.trim()) return items;
-
-    const query = searchQuery.toLowerCase().trim();
-    return items.filter(
-      (surah) => surah.name.toLowerCase().includes(query) || surah.number.toString().includes(query)
-    );
-  }, [items, searchQuery]);
-
-  return {
-    searchQuery,
-    setSearchQuery,
-    filteredItems,
-  };
-};
-
-const useSort = <T,>(items: readonly T[]) => {
-  const [sortBy, setSortBy] = useState<SortOption>('number');
-
-  const sortedItems = useMemo(() => {
-    return [...items].sort((a, b) => {
-      const surahA = a as Surah;
-      const surahB = b as Surah;
-
-      switch (sortBy) {
-        case 'name':
-          return surahA.name.localeCompare(surahB.name);
-        case 'verses':
-          return surahB.verses - surahA.verses;
-        case 'number':
-        default:
-          return surahA.number - surahB.number;
-      }
-    });
-  }, [items, sortBy]);
-
-  return {
-    sortBy,
-    setSortBy,
-    sortedItems,
-  };
-};
 
 // Components
 const SurahCard: React.FC<{
