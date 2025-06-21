@@ -1,5 +1,5 @@
 import { useState, useMemo } from 'react';
-import { SortOption } from 'screens/ChapterListScreen';
+import { SortOption } from 'components/SortMenu';
 import { Surah } from 'components/SurahCard';
 
 export const useSort = <T>(items: readonly T[]) => {

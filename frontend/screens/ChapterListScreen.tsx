@@ -1,24 +1,11 @@
 import { useSort } from 'hooks/useSort';
 import React, { useState, useCallback } from 'react';
 import { View, FlatList, ListRenderItem, SafeAreaView, StatusBar } from 'react-native';
-import { Appbar, Text, Menu, Searchbar } from 'react-native-paper';
+import { Appbar, Text } from 'react-native-paper';
 import { useSearch } from '../hooks/useSearch';
 import SurahCard, { Surah, SurahListProps } from 'components/SurahCard';
 import SearchHeader from 'components/SearchHeader';
-
-type SortOption = 'number' | 'name' | 'verses';
-
-interface SortMenuItem {
-  readonly key: SortOption;
-  readonly title: string;
-}
-
-// Constants
-const SORT_OPTIONS: readonly SortMenuItem[] = [
-  { key: 'number', title: 'Sort by Number' },
-  { key: 'name', title: 'Sort by Name' },
-  { key: 'verses', title: 'Sort by Verses' },
-] as const;
+import SortMenu, { SortOption } from 'components/SortMenu';
 
 // Sample data - replace with your actual data source
 const SAMPLE_SURAHS: readonly Surah[] = [
@@ -33,25 +20,6 @@ const SAMPLE_SURAHS: readonly Surah[] = [
   { id: 9, number: 9, name: 'At-Tawbah', nameArabic: 'التوبة', verses: 129 },
   { id: 10, number: 10, name: 'Yunus', nameArabic: 'يونس', verses: 109 },
 ] as const;
-
-const SortMenu: React.FC<{
-  readonly visible: boolean;
-  readonly sortBy: SortOption;
-  readonly onDismiss: () => void;
-  readonly onSort: (sortType: SortOption) => void;
-  readonly anchor: React.ReactNode;
-}> = ({ visible, sortBy, onDismiss, onSort, anchor }) => (
-  <Menu visible={visible} onDismiss={onDismiss} anchor={anchor}>
-    {SORT_OPTIONS.map((option) => (
-      <Menu.Item
-        key={option.key}
-        onPress={() => onSort(option.key)}
-        title={option.title}
-        leadingIcon={sortBy === option.key ? 'check' : undefined}
-      />
-    ))}
-  </Menu>
-);
 
 const SearchResultsInfo: React.FC<{
   readonly searchQuery: string;
