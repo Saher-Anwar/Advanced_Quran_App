@@ -7,6 +7,7 @@ import SurahCard, { Surah, SurahListProps } from 'components/SurahCard';
 import SearchHeader from 'components/SearchHeader';
 import SortMenu, { SortOption } from 'components/SortMenu';
 import { SAMPLE_SURAHS } from 'mock_data/list_item_data';
+import { LinearGradient } from 'expo-linear-gradient';
 
 const SearchResultsInfo: React.FC<{
   readonly searchQuery: string;
@@ -58,9 +59,13 @@ const SurahList: React.FC<SurahListProps> = ({ surahs = SAMPLE_SURAHS, onSurahPr
   return (
     <SafeAreaView className="flex-1">
       <StatusBar backgroundColor="#16a34a" barStyle="light-content" />
-      <View className="flex-1 bg-gray-800">
+      <LinearGradient
+        colors={['#1F1F1F', '#0D0D0D']}
+        start={{ x: 0, y: 0 }}
+        end={{ x: 1, y: 1 }}
+        className="flex-1">
         {/* Top Bar */}
-        <Appbar.Header style={{ backgroundColor: '#1f2937' }}>
+        <Appbar.Header style={{ backgroundColor: 'transparent' }}>
           {searchVisible ? (
             <SearchHeader
               searchQuery={searchQuery}
@@ -111,7 +116,7 @@ const SurahList: React.FC<SurahListProps> = ({ surahs = SAMPLE_SURAHS, onSurahPr
           maxToRenderPerBatch={10}
           windowSize={10}
         />
-      </View>
+      </LinearGradient>
     </SafeAreaView>
   );
 };
