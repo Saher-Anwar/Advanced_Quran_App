@@ -25,7 +25,14 @@ const SurahCard = React.memo(
       onPress?.(surah);
     }, [surah, onPress]);
 
-    return <CustomListItem title={surah.name} icon={'' + surah.number} onPress={() => {}} />;
+    return (
+      <CustomListItem
+        title={surah.name}
+        subtitle={surah.nameArabic}
+        icon={'' + surah.number}
+        onPress={handlePress}
+      />
+    );
   }
 );
 
