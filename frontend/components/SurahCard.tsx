@@ -1,5 +1,7 @@
 import React, { useCallback } from 'react';
 import CustomListItem from './CustomListItem';
+import { useNavigation } from 'hooks/useNavigation';
+import { SAMPLE_SURAHS } from 'mock_data/list_item_data';
 
 // Types
 export interface Surah {
@@ -12,9 +14,12 @@ export interface Surah {
 
 // Components
 const SurahCard = React.memo(({ surah }: { readonly surah: Surah }) => {
+  const navigation = useNavigation();
+
   const handlePress = useCallback(() => {
     console.log('Default handler:', surah.name);
-  }, [surah.name]);
+    navigation.navigate('Chapter', { surahInfo: surah });
+  }, [navigation, surah]);
 
   return (
     <CustomListItem
