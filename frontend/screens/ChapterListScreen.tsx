@@ -8,6 +8,7 @@ import SearchHeader from 'components/SearchHeader';
 import SortMenu, { SortOption } from 'components/SortMenu';
 import { SAMPLE_SURAHS } from 'mock_data/list_item_data';
 import { LinearGradient } from 'expo-linear-gradient';
+import { APP_THEMES } from 'utils/constants';
 
 const SearchResultsInfo: React.FC<{
   readonly searchQuery: string;
@@ -63,7 +64,7 @@ const ChapterListScreen = ({
     <SafeAreaView className="flex-1">
       <StatusBar backgroundColor="#16a34a" barStyle="light-content" />
       <LinearGradient
-        colors={['#1F1F1F', '#0D0D0D']}
+        colors={APP_THEMES.gradient}
         start={{ x: 0, y: 0 }}
         end={{ x: 1, y: 1 }}
         className="flex-1">
