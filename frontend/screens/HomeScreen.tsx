@@ -6,6 +6,7 @@ import PrayerTimesCard from 'components/PrayerTimesCard';
 import prayerTimeInfo from 'mock_data/prayer_time_info';
 import CustomListItem from 'components/CustomListItem';
 import Footer from 'components/Footer';
+import { APP_THEMES } from 'utils/constants';
 
 const HomeScreen = () => {
   const navigation = useNavigation();
@@ -18,7 +19,7 @@ const HomeScreen = () => {
     <View className="flex-1">
       {/* Background with Islamic geometric pattern */}
       <LinearGradient
-        colors={['#1F1F1F', '#0D0D0D']}
+        colors={APP_THEMES.gradient}
         start={{ x: 0, y: 0 }}
         end={{ x: 1, y: 1 }}
         className="flex-1">
