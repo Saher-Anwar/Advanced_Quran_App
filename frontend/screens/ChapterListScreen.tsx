@@ -25,7 +25,10 @@ const SearchResultsInfo: React.FC<{
 };
 
 // Main Component
-const SurahList: React.FC<SurahListProps> = ({ surahs = SAMPLE_SURAHS, onSurahPress }) => {
+const ChapterListScreen = ({
+  surahs = SAMPLE_SURAHS,
+  onSurahPress = (surah) => console.log('Default handler:', surah.name),
+}: SurahListProps) => {
   const [sortMenuVisible, setSortMenuVisible] = useState<boolean>(false);
   const [searchVisible, setSearchVisible] = useState<boolean>(false);
 
@@ -121,5 +124,5 @@ const SurahList: React.FC<SurahListProps> = ({ surahs = SAMPLE_SURAHS, onSurahPr
   );
 };
 
-export default SurahList;
+export default ChapterListScreen;
 export type { Surah, SurahListProps, SortOption };
