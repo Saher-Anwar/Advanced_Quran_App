@@ -3,12 +3,16 @@ import React, { useState, useCallback } from 'react';
 import { View, FlatList, ListRenderItem, SafeAreaView, StatusBar } from 'react-native';
 import { Appbar, Text } from 'react-native-paper';
 import { useSearch } from '../hooks/useSearch';
-import SurahCard, { Surah, SurahListProps } from 'components/SurahCard';
+import SurahCard, { Surah } from 'components/SurahCard';
 import SearchHeader from 'components/SearchHeader';
 import SortMenu, { SortOption } from 'components/SortMenu';
 import { SAMPLE_SURAHS } from 'mock_data/list_item_data';
 import { LinearGradient } from 'expo-linear-gradient';
 import { APP_THEMES } from 'utils/constants';
+
+export interface SurahListProps {
+  readonly surahs?: readonly Surah[];
+}
 
 const SearchResultsInfo: React.FC<{
   readonly searchQuery: string;
@@ -26,10 +30,7 @@ const SearchResultsInfo: React.FC<{
 };
 
 // Main Component
-const ChapterListScreen = ({
-  surahs = SAMPLE_SURAHS,
-  onSurahPress = (surah) => console.log('Default handler:', surah.name),
-}: SurahListProps) => {
+const ChapterListScreen = ({ surahs = SAMPLE_SURAHS }: SurahListProps) => {
   const [sortMenuVisible, setSortMenuVisible] = useState<boolean>(false);
   const [searchVisible, setSearchVisible] = useState<boolean>(false);
 
@@ -56,8 +57,8 @@ const ChapterListScreen = ({
   const keyExtractor = useCallback((item: Surah) => item.id.toString(), []);
 
   const renderSurahItem: ListRenderItem<Surah> = useCallback(
-    ({ item }) => <SurahCard surah={item} onPress={onSurahPress} />,
-    [onSurahPress]
+    ({ item }) => <SurahCard surah={item} />,
+    []
   );
 
   return (
@@ -126,4 +127,4 @@ const ChapterListScreen = ({
 };
 
 export default ChapterListScreen;
-export type { Surah, SurahListProps, SortOption };
+export type { Surah, SortOption };

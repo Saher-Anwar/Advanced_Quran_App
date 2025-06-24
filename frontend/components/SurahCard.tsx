@@ -1,7 +1,4 @@
 import React, { useCallback } from 'react';
-import { View } from 'react-native';
-import { Card, Text } from 'react-native-paper';
-import { APP_THEMES } from 'utils/constants';
 import CustomListItem from './CustomListItem';
 
 // Types
@@ -13,28 +10,21 @@ export interface Surah {
   readonly verses: number;
 }
 
-export interface SurahListProps {
-  readonly surahs?: readonly Surah[];
-  readonly onSurahPress?: (surah: Surah) => void;
-}
-
 // Components
-const SurahCard = React.memo(
-  ({ surah, onPress }: { readonly surah: Surah; readonly onPress?: (surah: Surah) => void }) => {
-    const handlePress = useCallback(() => {
-      onPress?.(surah);
-    }, [surah, onPress]);
+const SurahCard = React.memo(({ surah }: { readonly surah: Surah }) => {
+  const handlePress = useCallback(() => {
+    console.log('Default handler:', surah.name);
+  }, [surah.name]);
 
-    return (
-      <CustomListItem
-        title={surah.name}
-        subtitle={surah.nameArabic}
-        icon={'' + surah.number}
-        onPress={handlePress}
-      />
-    );
-  }
-);
+  return (
+    <CustomListItem
+      title={surah.name}
+      subtitle={surah.nameArabic}
+      icon={surah.number.toString()}
+      onPress={handlePress}
+    />
+  );
+});
 
 SurahCard.displayName = 'SurahCard';
 
