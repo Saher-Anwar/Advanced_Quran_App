@@ -3,6 +3,7 @@ import ClickableWordsParagraph from '../components/word/ClickableWordsParagraph'
 import arabicWordInfo from '../mock_data/arabic_word_data';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { RootStackParamList } from 'navigation/navigation';
+import PageTitle from 'components/PageTitle';
 
 type ChapterScreenProps = NativeStackScreenProps<RootStackParamList, 'Chapter'>;
 
@@ -10,8 +11,10 @@ const ChapterScreen = ({ route }: ChapterScreenProps) => {
   const surahInfo = route.params.surahInfo;
 
   return (
-    <View style={styles.appContainer}>
-      <Text onPress={() => console.log(`${surahInfo.name}`)} style={styles.title}>
+    <View className="flex-1 justify-center">
+      <Text
+        className="text-center text-4xl font-bold text-white"
+        onPress={() => console.log(`${surahInfo.name}`)}>
         Clickable Paragraph
       </Text>
       <ClickableWordsParagraph words={arabicWordInfo} />

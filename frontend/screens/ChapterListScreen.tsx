@@ -62,9 +62,9 @@ const ChapterListScreen = ({ surahs = SAMPLE_SURAHS }: SurahListProps) => {
   );
 
   return (
-    <SafeAreaView className="flex-1 bg-transparent">
+    <SafeAreaView className="flex-1">
       <StatusBar backgroundColor="transparent" barStyle="light-content" />
-      <View className="flex-1 bg-transparent">
+      <View className="flex-1">
         {/* Top Bar */}
         <Appbar.Header style={{ backgroundColor: 'transparent' }}>
           {searchVisible ? (

@@ -14,7 +14,7 @@ const ClickableWord = ({ word, onWordPress, isSelected }: ClickableWordProps) =>
       <Text
         onPress={handlePress}
         className={`rounded px-1 py-1 font-arabic text-2xl font-medium ${
-          isSelected ? 'bg-indigo-100 text-indigo-800' : 'text-gray-800 active:bg-gray-100'
+          isSelected ? 'bg-white/75 text-quranGreen' : 'active:bg-white/16 text-white'
         }`}
         style={{
           textAlign: 'center',
