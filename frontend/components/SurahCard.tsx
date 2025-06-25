@@ -19,7 +19,12 @@ const SurahCard = React.memo(({ surah }: { readonly surah: Surah }) => {
   const handlePress = useCallback(() => {
     console.log('Default handler:', surah.name);
     navigation.navigate('Chapter', {
-      surahInfo: { chapterNumber: 1, chapterName: 'Al-Fatiha', totalVerses: 110, verses: [] },
+      surahInfo: {
+        chapterNumber: surah.id,
+        chapterName: surah.name,
+        totalVerses: 110,
+        verses: [],
+      },
     });
   }, [navigation, surah]);
 

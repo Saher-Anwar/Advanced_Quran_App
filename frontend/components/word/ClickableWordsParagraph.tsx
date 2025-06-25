@@ -25,7 +25,7 @@ const ClickableWordsParagraph = ({ words }: { words: WordInfo[] }) => {
   return (
     <View className="relative rounded-2xl border bg-white/15 p-4">
       {/* Words Container */}
-      <View className="flex-row flex-wrap justify-center leading-relaxed">
+      <View className="flex-row-reverse flex-wrap justify-center leading-relaxed">
         {words.map((word, index) => (
           <React.Fragment key={`${word.id}-${index}`}>
             <ClickableWord
