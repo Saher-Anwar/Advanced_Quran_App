@@ -1,9 +1,9 @@
-import { RefObject, useState } from "react";
-import { WordInfo } from "../../types/Word";
-import { View, Text, StyleSheet } from "react-native";
-import SharedPopover from "./SharedPopover";
-import ClickableWord from "./ClickableWord";
-import React from "react";
+import { RefObject, useState } from 'react';
+import { WordInfo } from '../../types/Word';
+import { View, Text } from 'react-native';
+import SharedPopover from './SharedPopover';
+import ClickableWord from './ClickableWord';
+import React from 'react';
 
 const ClickableWordsParagraph = ({ words }: { words: WordInfo[] }) => {
   const [selectedWord, setSelectedWord] = useState<WordInfo | null>(null);
@@ -23,25 +23,26 @@ const ClickableWordsParagraph = ({ words }: { words: WordInfo[] }) => {
   };
 
   return (
-    <View style={styles.paragraphContainer}>
-      <View style={styles.paragraph}>
+    <View className="relative rounded-2xl border bg-white/15 p-4">
+      {/* Words Container */}
+      <View className="flex-row flex-wrap justify-center leading-relaxed">
         {words.map((word, index) => (
-          <React.Fragment key={`${word.word}-${index}`}>
+          <React.Fragment key={`${word.id}-${index}`}>
             <ClickableWord
               word={word}
               onWordPress={handleWordPress}
               isSelected={selectedWord?.id === word.id && isPopoverVisible}
             />
             {/* Add space between words */}
-            {index < words.length - 1 && <Text style={styles.space}> </Text>}
+            {index < words.length - 1 && <Text className="mx-1 text-2xl text-gray-700"> </Text>}
           </React.Fragment>
         ))}
       </View>
 
-      {/* Single shared popover */}
+      {/* Popover */}
       <SharedPopover
         word={selectedWord as WordInfo}
-        anchorRef={anchorRef as RefObject<Text>}
+        anchorRef={anchorRef as RefObject<View>}
         isVisible={isPopoverVisible}
         onClose={handleClosePopover}
       />
@@ -50,26 +51,3 @@ const ClickableWordsParagraph = ({ words }: { words: WordInfo[] }) => {
 };
 
 export default ClickableWordsParagraph;
-
-const styles = StyleSheet.create({
-  paragraphContainer: {
-    backgroundColor: "white",
-    padding: 16,
-    borderRadius: 8,
-    shadowColor: "#000",
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.1,
-    shadowRadius: 4,
-    elevation: 3,
-  },
-  paragraph: {
-    flexDirection: "row-reverse",
-    flexWrap: "wrap",
-    lineHeight: 24,
-    textAlign: "right",
-  },
-  space: {
-    fontSize: 16,
-    lineHeight: 24,
-  },
-});

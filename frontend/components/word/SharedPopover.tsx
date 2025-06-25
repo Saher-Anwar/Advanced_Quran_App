@@ -1,5 +1,5 @@
 import Popover, { PopoverPlacement } from 'react-native-popover-view';
-import { StyleSheet, TouchableHighlight, View, Text, TouchableOpacity } from 'react-native';
+import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 import { SharedPopoverProps } from '../../types/SharedPopover';
 import { RefObject } from 'react';
 import { Button, Card, Divider } from 'react-native-paper';
