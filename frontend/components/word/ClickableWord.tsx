@@ -1,54 +1,28 @@
-import { RefObject, useRef } from "react";
-import { TouchableOpacity, Text, View, StyleSheet } from "react-native";
-import { ClickableWordProps } from "../../types/Word";
+import { RefObject, useRef } from 'react';
+import { Text, View } from 'react-native';
+import { ClickableWordProps } from '../../types/Word';
 
-const ClickableWord = ({
-  word,
-  onWordPress,
-  isSelected,
-}: ClickableWordProps) => {
-  const ref = useRef<View>(null);
+const ClickableWord = ({ word, onWordPress, isSelected }: ClickableWordProps) => {
+  const wordRef = useRef<View>(null);
 
   const handlePress = () => {
-    onWordPress(word, ref as RefObject<View>);
+    onWordPress(word, wordRef as RefObject<View>);
   };
 
   return (
-    <TouchableOpacity
-      ref={ref}
-      onPress={handlePress}
-      style={[styles.wordButton, isSelected && styles.wordButtonSelected]}
-    >
-      <Text style={[styles.wordText, isSelected && styles.wordTextSelected]}>
+    <View ref={wordRef}>
+      <Text
+        onPress={handlePress}
+        className={`rounded px-1 py-1 font-arabic text-2xl font-medium ${
+          isSelected ? 'bg-indigo-100 text-indigo-800' : 'text-gray-800 active:bg-gray-100'
+        }`}
+        style={{
+          textAlign: 'center',
+        }}>
         {word.word}
       </Text>
-    </TouchableOpacity>
+    </View>
   );
 };
 
 export default ClickableWord;
-
-const styles = StyleSheet.create({
-  wordButton: {
-    borderBottomWidth: 1,
-    borderBottomColor: "#007AFF",
-    borderStyle: "dotted",
-  },
-  wordText: {
-    fontSize: 16,
-    color: "#007AFF",
-    lineHeight: 24,
-    textAlign: "right",
-  },
-  wordButtonSelected: {
-    backgroundColor: "#007AFF",
-    borderRadius: 4,
-    paddingHorizontal: 4,
-    paddingVertical: 2,
-    borderBottomWidth: 0,
-  },
-  wordTextSelected: {
-    color: "white",
-    fontWeight: "600",
-  },
-});
