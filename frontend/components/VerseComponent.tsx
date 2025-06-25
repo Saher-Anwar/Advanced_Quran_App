@@ -6,8 +6,8 @@ const VerseComponent = ({ verse, verseIndex }: { verse: Verse; verseIndex: numbe
   return (
     <View className="bg-white/16 mb-6 overflow-hidden rounded-xl border border-gray-100 shadow-sm">
       {/* Verse Number */}
-      <View className="border-b border-indigo-100 bg-indigo-50 px-4 py-3">
-        <Text className="text-lg font-semibold text-indigo-700">Verse {verse.verseNumber}</Text>
+      <View className="border-b border-indigo-100 bg-white/15 px-4 py-3">
+        <Text className="text-lg font-semibold text-white">Verse {verse.verseNumber}</Text>
       </View>
 
       {/* Verse Content */}
