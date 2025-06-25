@@ -149,6 +149,7 @@ export const mockChapterData: Record<string, ChapterData> = {
             wordNumber: 1,
             root: 'ذ ل ك',
             partOfSpeech: 'demonstrative pronoun',
+            type: 'Test',
           },
           {
             id: '2-2-2',

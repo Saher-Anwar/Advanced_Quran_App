@@ -50,17 +50,19 @@ const SharedModal = ({ word, anchorRef, isVisible, onClose }: SharedPopoverProps
                 </View>
 
                 {/* Type */}
-                <View className="mb-3 px-4">
-                  <View className="mb-1 flex-row items-center">
-                    <Type size={14} color="#059669" className="mr-2" />
-                    <Text className="text-xs font-medium uppercase tracking-wide text-emerald-600">
-                      Type
-                    </Text>
+                {word.type && (
+                  <View className="mb-3 px-4">
+                    <View className="mb-1 flex-row items-center">
+                      <Type size={14} color="#059669" className="mr-2" />
+                      <Text className="text-xs font-medium uppercase tracking-wide text-black">
+                        Type
+                      </Text>
+                    </View>
+                    <View className="self-start rounded-full px-3 py-1">
+                      <Text className="text-sm font-medium text-emerald-700">{word.type}</Text>
+                    </View>
                   </View>
-                  <View className="self-start rounded-full bg-emerald-50 px-3 py-1">
-                    <Text className="text-sm font-medium text-emerald-700">{word.type}</Text>
-                  </View>
-                </View>
+                )}
 
                 {/* Example (if exists) */}
                 {word.example && (
