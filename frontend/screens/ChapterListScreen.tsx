@@ -22,7 +22,7 @@ const SearchResultsInfo: React.FC<{
 
   return (
     <View className="border-b border-gray-200 bg-white px-4 py-2">
-      <Text variant="bodySmall" className="text-gray-600">
+      <Text variant="bodySmall" className="text-white/80">
         Found {resultCount} surah{resultCount !== 1 ? 's' : ''} for &quot;{searchQuery}&quot;
       </Text>
     </View>
@@ -62,13 +62,9 @@ const ChapterListScreen = ({ surahs = SAMPLE_SURAHS }: SurahListProps) => {
   );
 
   return (
-    <SafeAreaView className="flex-1">
-      <StatusBar backgroundColor="#16a34a" barStyle="light-content" />
-      <LinearGradient
-        colors={APP_THEMES.gradient}
-        start={{ x: 0, y: 0 }}
-        end={{ x: 1, y: 1 }}
-        className="flex-1">
+    <SafeAreaView className="flex-1 bg-transparent">
+      <StatusBar backgroundColor="transparent" barStyle="light-content" />
+      <View className="flex-1 bg-transparent">
         {/* Top Bar */}
         <Appbar.Header style={{ backgroundColor: 'transparent' }}>
           {searchVisible ? (
@@ -121,7 +117,7 @@ const ChapterListScreen = ({ surahs = SAMPLE_SURAHS }: SurahListProps) => {
           maxToRenderPerBatch={10}
           windowSize={10}
         />
-      </LinearGradient>
+      </View>
     </SafeAreaView>
   );
 };

@@ -14,6 +14,8 @@ const AppNavigator = () => {
         initialRouteName="Home"
         screenOptions={{
           headerShown: false,
+          contentStyle: { backgroundColor: 'transparent' },
+          animation: 'none',
         }}>
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="ChapterList" component={ChapterListScreen} />
