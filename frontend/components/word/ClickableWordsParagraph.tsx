@@ -1,7 +1,7 @@
 import { RefObject, useState } from 'react';
 import { WordInfo } from '../../types/Word';
 import { View, Text } from 'react-native';
-import SharedPopover from './SharedPopover';
+import SharedModal from './SharedPopover';
 import ClickableWord from './ClickableWord';
 import React from 'react';
 
@@ -40,7 +40,7 @@ const ClickableWordsParagraph = ({ words }: { words: WordInfo[] }) => {
       </View>
 
       {/* Popover */}
-      <SharedPopover
+      <SharedModal
         word={selectedWord as WordInfo}
         anchorRef={anchorRef as RefObject<View>}
         isVisible={isPopoverVisible}

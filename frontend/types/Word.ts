@@ -2,19 +2,27 @@ import { RefObject } from 'react';
 import { View } from 'react-native';
 
 export interface WordInfo {
-  id: number;
+  id: string;
   word: string;
-  definition: string;
-  type: string;
+  translation: string;
+  transliteration?: string;
+  wordNumber?: number;
+  root?: string;
+  type?: string;
   example?: string;
+  partOfSpeech?: string;
 }
 
 export interface Verse {
   verseNumber: number;
+  translation?: string;
   words: WordInfo[];
 }
 
 export interface ChapterData {
+  chapterNumber: number;
+  chapterName: string;
+  totalVerses: number;
   verses: Verse[];
 }
 
