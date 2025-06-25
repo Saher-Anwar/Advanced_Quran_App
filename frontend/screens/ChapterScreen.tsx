@@ -7,11 +7,11 @@ import { RootStackParamList } from 'navigation/navigation';
 type ChapterScreenProps = NativeStackScreenProps<RootStackParamList, 'Chapter'>;
 
 const ChapterScreen = ({ route }: ChapterScreenProps) => {
-  const surahInfo = route.params;
+  const surahInfo = route.params.surahInfo;
 
   return (
     <View style={styles.appContainer}>
-      <Text onPress={() => console.log(`${surahInfo.surahInfo.name}`)} style={styles.title}>
+      <Text onPress={() => console.log(`${surahInfo.name}`)} style={styles.title}>
         Clickable Paragraph
       </Text>
       <ClickableWordsParagraph words={arabicWordInfo} />
