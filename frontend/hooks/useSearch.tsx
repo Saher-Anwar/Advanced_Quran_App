@@ -1,7 +1,11 @@
 import { useState, useMemo } from 'react';
 import { Surah } from 'types/Chapter';
 
-// Custom hooks
+/**
+ * Used to search for a specific Surah in list of surahs
+ * @param items List of Surahs
+ * @returns The search query; callback for setting search query; list of filtered Surahs
+ */
 export const useSearch = (items: readonly Surah[]) => {
   const [searchQuery, setSearchQuery] = useState<string>('');
 
