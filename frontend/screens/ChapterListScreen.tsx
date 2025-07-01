@@ -4,7 +4,7 @@ import { View, FlatList, ListRenderItem, SafeAreaView, StatusBar } from 'react-n
 import { Appbar, Text } from 'react-native-paper';
 import { useSearch } from '../hooks/useSearch';
 import SurahCard from 'components/SurahCard';
-import { Surah } from 'types/Chapter';
+import { Surah } from 'types/Surah';
 import SearchHeader from 'components/SearchHeader';
 import SortMenu from 'components/SortMenu';
 import { SortOption } from 'types/SortOption';

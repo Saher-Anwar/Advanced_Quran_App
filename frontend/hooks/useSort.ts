@@ -1,6 +1,6 @@
 import { useState, useMemo } from 'react';
 import { SortOption } from 'types/SortOption';
-import { Surah } from 'types/Chapter';
+import { Surah } from 'types/Surah';
 
 /**
  * Generic hook that sorts based on sort criteria. Default set to 'number'

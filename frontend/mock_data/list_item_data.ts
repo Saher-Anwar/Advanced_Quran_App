@@ -1,4 +1,4 @@
-import { Surah } from 'types/Chapter';
+import { Surah } from 'types/Surah';
 import { ListItemDataProp } from 'types/ListItemProps';
 
 export const listOfChapters: ListItemDataProp[] = [

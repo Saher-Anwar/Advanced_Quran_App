@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react';
 import CustomListItem from './CustomListItem';
 import { useNavigation } from 'hooks/useNavigation';
-import { Surah } from 'types/Chapter';
+import { Surah } from 'types/Surah';
 
 const SurahCard = React.memo(({ surah }: { readonly surah: Surah }) => {
   const navigation = useNavigation();

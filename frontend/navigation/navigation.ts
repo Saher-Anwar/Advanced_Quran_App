@@ -1,4 +1,4 @@
-import { Surah } from 'types/Chapter';
+import { Surah } from 'types/Surah';
 import { ChapterData } from 'types/Word';
 
 // Define the expected parameters of each screen

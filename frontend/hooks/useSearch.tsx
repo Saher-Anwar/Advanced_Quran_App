@@ -1,5 +1,5 @@
 import { useState, useMemo } from 'react';
-import { Surah } from 'types/Chapter';
+import { Surah } from 'types/Surah';
 
 /**
  * Used to search for a specific Surah in list of surahs
