@@ -3,12 +3,12 @@ import React, { useState, useCallback } from 'react';
 import { View, FlatList, ListRenderItem, SafeAreaView, StatusBar } from 'react-native';
 import { Appbar, Text } from 'react-native-paper';
 import { useSearch } from '../hooks/useSearch';
-import SurahCard, { Surah } from 'components/SurahCard';
+import SurahCard from 'components/SurahCard';
+import { Surah } from 'types/Chapter';
 import SearchHeader from 'components/SearchHeader';
-import SortMenu, { SortOption } from 'components/SortMenu';
+import SortMenu from 'components/SortMenu';
+import { SortOption } from 'types/SortOption';
 import { SAMPLE_SURAHS } from 'mock_data/list_item_data';
-import { LinearGradient } from 'expo-linear-gradient';
-import { APP_THEMES } from 'utils/constants';
 
 export interface SurahListProps {
   readonly surahs?: readonly Surah[];

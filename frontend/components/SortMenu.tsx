@@ -1,8 +1,7 @@
 import { Menu } from 'react-native-paper';
+import { SortOption } from '../types/SortOption';
 
-export type SortOption = 'number' | 'name' | 'verses';
-
-export interface SortMenuItem {
+interface SortMenuItem {
   readonly key: SortOption;
   readonly title: string;
 }

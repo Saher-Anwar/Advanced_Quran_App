@@ -1,7 +1,5 @@
-import { TouchableOpacity, View, Text } from 'react-native';
+import { View } from 'react-native';
 import QuickActionsItem from './QuickActionsItem';
-
-interface QuickActionsGridProps {}
 
 const QuickActionsGrid = () => {
   return (

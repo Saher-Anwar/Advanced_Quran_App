@@ -1,18 +1,8 @@
 import React, { useCallback } from 'react';
 import CustomListItem from './CustomListItem';
 import { useNavigation } from 'hooks/useNavigation';
-import { SAMPLE_SURAHS } from 'mock_data/list_item_data';
+import { Surah } from 'types/Chapter';
 
-// Types
-export interface Surah {
-  readonly id: number;
-  readonly number: number;
-  readonly name: string;
-  readonly nameArabic: string;
-  readonly verses: number;
-}
-
-// Components
 const SurahCard = React.memo(({ surah }: { readonly surah: Surah }) => {
   const navigation = useNavigation();
 
