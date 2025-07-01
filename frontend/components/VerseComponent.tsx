@@ -1,6 +1,6 @@
 import { View, Text } from 'react-native';
 import ClickableWordsParagraph from './word/ClickableWordsParagraph';
-import { Verse } from 'types/Word';
+import { Verse } from 'types/Surah';
 
 const VerseComponent = ({ verse, verseIndex }: { verse: Verse; verseIndex: number }) => {
   return (

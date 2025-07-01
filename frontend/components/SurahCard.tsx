@@ -10,8 +10,8 @@ const SurahCard = React.memo(({ surah }: { readonly surah: Surah }) => {
     console.log('Default handler:', surah.name);
     navigation.navigate('Chapter', {
       surahInfo: {
-        chapterNumber: surah.id,
-        chapterName: surah.name,
+        number: surah.id,
+        name: surah.name,
         totalVerses: 110,
         verses: [],
       },

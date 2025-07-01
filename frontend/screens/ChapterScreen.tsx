@@ -3,28 +3,28 @@ import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { RootStackParamList } from 'navigation/navigation';
 import VerseComponent from 'components/VerseComponent';
 import { useEffect, useState } from 'react';
-import { ChapterData } from 'types/Word';
-import { fetchChapterData } from 'mock_data/chapters_mock_data';
+import { SurahData } from 'types/Surah';
+import { fetchSurahData } from 'mock_data/surahs_mock_data';
 import PageTitle from 'components/PageTitle';
 
-type ChapterScreenProps = NativeStackScreenProps<RootStackParamList, 'Chapter'>;
+type SurahScreenProps = NativeStackScreenProps<RootStackParamList, 'Chapter'>;
 
-const ChapterScreen = ({ route }: ChapterScreenProps) => {
+const SurahScreen = ({ route }: SurahScreenProps) => {
   const { surahInfo } = route.params;
-  const [chapterData, setChapterData] = useState<ChapterData | null>(null);
+  const [surahData, setSurahData] = useState<SurahData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   // API call to fetch chapter verses
   useEffect(() => {
-    const loadChapterData = async () => {
+    const loadSurahData = async () => {
       try {
         setLoading(true);
         setError(null);
 
         // Use mock data instead of real API
-        const data = await fetchChapterData(surahInfo.chapterNumber.toString());
-        setChapterData(data);
+        const data = await fetchSurahData(surahInfo.number.toString());
+        setSurahData(data);
       } catch (err) {
         setError(err instanceof Error ? err.message : 'An error occurred');
       } finally {
@@ -32,8 +32,8 @@ const ChapterScreen = ({ route }: ChapterScreenProps) => {
       }
     };
 
-    loadChapterData();
-  }, [surahInfo.chapterNumber]);
+    loadSurahData();
+  }, [surahInfo.number]);
 
   if (loading) {
     return (
@@ -53,7 +53,7 @@ const ChapterScreen = ({ route }: ChapterScreenProps) => {
     );
   }
 
-  if (!chapterData) {
+  if (!surahData) {
     return (
       <View className="flex-1 items-center justify-center bg-gray-50">
         <Text className="text-gray-500">No chapter data available</Text>
@@ -66,13 +66,13 @@ const ChapterScreen = ({ route }: ChapterScreenProps) => {
       <View className="px-4 py-6">
         {/* Chapter Header */}
         <PageTitle
-          title={chapterData.chapterName}
-          subtitle={`Chapter ${chapterData.chapterNumber} • ${chapterData.totalVerses} verses`}
+          title={surahData.name}
+          subtitle={`Chapter ${surahData.number} • ${surahData.totalVerses} verses`}
           quote={undefined}
         />
 
         {/* Verses */}
-        {chapterData.verses.map((verse, index) => (
+        {surahData.verses.map((verse, index) => (
           <VerseComponent key={`verse-${verse.verseNumber}`} verse={verse} verseIndex={index} />
         ))}
       </View>
@@ -80,4 +80,4 @@ const ChapterScreen = ({ route }: ChapterScreenProps) => {
   );
 };
 
-export default ChapterScreen;
+export default SurahScreen;

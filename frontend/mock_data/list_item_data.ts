@@ -3,7 +3,7 @@ import { ListItemDataProp } from 'types/ListItemProps';
 
 export const listOfChapters: ListItemDataProp[] = [
   {
-    chapterNumber: 1,
+    number: 1,
     name: 'Al-Fatihah',
     arabicName: 'الفاتحة',
     revelationType: 'Meccan',
@@ -11,7 +11,7 @@ export const listOfChapters: ListItemDataProp[] = [
     translation: 'The Opening',
   },
   {
-    chapterNumber: 2,
+    number: 2,
     name: 'Al-Baqarah',
     arabicName: 'البقرة',
     revelationType: 'Medinan',
@@ -19,7 +19,7 @@ export const listOfChapters: ListItemDataProp[] = [
     translation: 'The Cow',
   },
   {
-    chapterNumber: 3,
+    number: 3,
     name: 'Aal-i-Imran',
     arabicName: 'آل عمران',
     revelationType: 'Medinan',
@@ -27,7 +27,7 @@ export const listOfChapters: ListItemDataProp[] = [
     translation: 'The Family of Imran',
   },
   {
-    chapterNumber: 4,
+    number: 4,
     name: 'An-Nisa',
     arabicName: 'النساء',
     revelationType: 'Medinan',
@@ -35,7 +35,7 @@ export const listOfChapters: ListItemDataProp[] = [
     translation: 'The Women',
   },
   {
-    chapterNumber: 5,
+    number: 5,
     name: "Al-Ma'idah",
     arabicName: 'المائدة',
     revelationType: 'Medinan',
@@ -43,7 +43,7 @@ export const listOfChapters: ListItemDataProp[] = [
     translation: 'The Table Spread',
   },
   {
-    chapterNumber: 6,
+    number: 6,
     name: "Al-An'am",
     arabicName: 'الأنعام',
     revelationType: 'Meccan',
@@ -51,7 +51,7 @@ export const listOfChapters: ListItemDataProp[] = [
     translation: 'The Cattle',
   },
   {
-    chapterNumber: 7,
+    number: 7,
     name: "Al-A'raf",
     arabicName: 'الأعراف',
     revelationType: 'Meccan',
@@ -59,7 +59,7 @@ export const listOfChapters: ListItemDataProp[] = [
     translation: 'The Heights',
   },
   {
-    chapterNumber: 8,
+    number: 8,
     name: 'Al-Anfal',
     arabicName: 'الأنفال',
     revelationType: 'Medinan',
@@ -67,7 +67,7 @@ export const listOfChapters: ListItemDataProp[] = [
     translation: 'The Spoils of War',
   },
   {
-    chapterNumber: 9,
+    number: 9,
     name: 'At-Tawbah',
     arabicName: 'التوبة',
     revelationType: 'Medinan',
@@ -75,7 +75,7 @@ export const listOfChapters: ListItemDataProp[] = [
     translation: 'The Repentance',
   },
   {
-    chapterNumber: 10,
+    number: 10,
     name: 'Yunus',
     arabicName: 'يونس',
     revelationType: 'Meccan',
@@ -83,7 +83,7 @@ export const listOfChapters: ListItemDataProp[] = [
     translation: 'Jonah',
   },
   {
-    chapterNumber: 11,
+    number: 11,
     name: 'Hud',
     arabicName: 'هود',
     revelationType: 'Meccan',
@@ -91,7 +91,7 @@ export const listOfChapters: ListItemDataProp[] = [
     translation: 'Hud',
   },
   {
-    chapterNumber: 12,
+    number: 12,
     name: 'Yusuf',
     arabicName: 'يوسف',
     revelationType: 'Meccan',
@@ -99,7 +99,7 @@ export const listOfChapters: ListItemDataProp[] = [
     translation: 'Joseph',
   },
   {
-    chapterNumber: 13,
+    number: 13,
     name: "Ar-Ra'd",
     arabicName: 'الرعد',
     revelationType: 'Medinan',
@@ -107,7 +107,7 @@ export const listOfChapters: ListItemDataProp[] = [
     translation: 'The Thunder',
   },
   {
-    chapterNumber: 14,
+    number: 14,
     name: 'Ibrahim',
     arabicName: 'إبراهيم',
     revelationType: 'Meccan',
@@ -115,7 +115,7 @@ export const listOfChapters: ListItemDataProp[] = [
     translation: 'Abraham',
   },
   {
-    chapterNumber: 15,
+    number: 15,
     name: 'Al-Hijr',
     arabicName: 'الحجر',
     revelationType: 'Meccan',
@@ -123,7 +123,7 @@ export const listOfChapters: ListItemDataProp[] = [
     translation: 'The Rocky Tract',
   },
   {
-    chapterNumber: 16,
+    number: 16,
     name: 'An-Nahl',
     arabicName: 'النحل',
     revelationType: 'Meccan',
@@ -131,7 +131,7 @@ export const listOfChapters: ListItemDataProp[] = [
     translation: 'The Bee',
   },
   {
-    chapterNumber: 17,
+    number: 17,
     name: 'Al-Isra',
     arabicName: 'الإسراء',
     revelationType: 'Meccan',
@@ -139,7 +139,7 @@ export const listOfChapters: ListItemDataProp[] = [
     translation: 'The Night Journey',
   },
   {
-    chapterNumber: 18,
+    number: 18,
     name: 'Al-Kahf',
     arabicName: 'الكهف',
     revelationType: 'Meccan',
@@ -147,7 +147,7 @@ export const listOfChapters: ListItemDataProp[] = [
     translation: 'The Cave',
   },
   {
-    chapterNumber: 19,
+    number: 19,
     name: 'Maryam',
     arabicName: 'مريم',
     revelationType: 'Meccan',
@@ -155,7 +155,7 @@ export const listOfChapters: ListItemDataProp[] = [
     translation: 'Mary',
   },
   {
-    chapterNumber: 20,
+    number: 20,
     name: 'Ta-Ha',
     arabicName: 'طه',
     revelationType: 'Meccan',
@@ -163,7 +163,7 @@ export const listOfChapters: ListItemDataProp[] = [
     translation: 'Ta-Ha',
   },
   {
-    chapterNumber: 21,
+    number: 21,
     name: 'Al-Anbiya',
     arabicName: 'الأنبياء',
     revelationType: 'Meccan',
@@ -171,7 +171,7 @@ export const listOfChapters: ListItemDataProp[] = [
     translation: 'The Prophets',
   },
   {
-    chapterNumber: 22,
+    number: 22,
     name: 'Al-Hajj',
     arabicName: 'الحج',
     revelationType: 'Medinan',
@@ -179,7 +179,7 @@ export const listOfChapters: ListItemDataProp[] = [
     translation: 'The Pilgrimage',
   },
   {
-    chapterNumber: 23,
+    number: 23,
     name: "Al-Mu'minun",
     arabicName: 'المؤمنون',
     revelationType: 'Meccan',
@@ -187,7 +187,7 @@ export const listOfChapters: ListItemDataProp[] = [
     translation: 'The Believers',
   },
   {
-    chapterNumber: 24,
+    number: 24,
     name: 'An-Nur',
     arabicName: 'النور',
     revelationType: 'Medinan',
@@ -195,7 +195,7 @@ export const listOfChapters: ListItemDataProp[] = [
     translation: 'The Light',
   },
   {
-    chapterNumber: 25,
+    number: 25,
     name: 'Al-Furqan',
     arabicName: 'الفرقان',
     revelationType: 'Meccan',
@@ -203,7 +203,7 @@ export const listOfChapters: ListItemDataProp[] = [
     translation: 'The Criterion',
   },
   {
-    chapterNumber: 26,
+    number: 26,
     name: "Ash-Shu'ara",
     arabicName: 'الشعراء',
     revelationType: 'Meccan',
@@ -211,7 +211,7 @@ export const listOfChapters: ListItemDataProp[] = [
     translation: 'The Poets',
   },
   {
-    chapterNumber: 27,
+    number: 27,
     name: 'An-Naml',
     arabicName: 'النمل',
     revelationType: 'Meccan',
@@ -219,7 +219,7 @@ export const listOfChapters: ListItemDataProp[] = [
     translation: 'The Ant',
   },
   {
-    chapterNumber: 28,
+    number: 28,
     name: 'Al-Qasas',
     arabicName: 'القصص',
     revelationType: 'Meccan',
@@ -227,7 +227,7 @@ export const listOfChapters: ListItemDataProp[] = [
     translation: 'The Stories',
   },
   {
-    chapterNumber: 29,
+    number: 29,
     name: 'Al-Ankabut',
     arabicName: 'العنكبوت',
     revelationType: 'Meccan',
@@ -235,7 +235,7 @@ export const listOfChapters: ListItemDataProp[] = [
     translation: 'The Spider',
   },
   {
-    chapterNumber: 30,
+    number: 30,
     name: 'Ar-Rum',
     arabicName: 'الروم',
     revelationType: 'Meccan',

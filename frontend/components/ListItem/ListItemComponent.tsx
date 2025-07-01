@@ -6,7 +6,7 @@ import NumberSymbol from './NumberSymbol';
 const ListItemComponent = ({ data, onPress }: ListItemComponentProp) => (
   <TouchableOpacity style={styles.container} onPress={onPress}>
     <View style={styles.symbolContainer}>
-      <NumberSymbol number={data.chapterNumber} />
+      <NumberSymbol number={data.number} />
     </View>
     <View style={styles.listItemInfoContainer}>
       <ListItemInfo {...data} />

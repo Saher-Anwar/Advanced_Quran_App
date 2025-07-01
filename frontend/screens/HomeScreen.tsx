@@ -11,8 +11,8 @@ import { APP_THEMES } from 'utils/constants';
 const HomeScreen = () => {
   const navigation = useNavigation();
 
-  const navigateToChapterList = () => {
-    navigation.navigate('ChapterList');
+  const navigateToSurahList = () => {
+    navigation.navigate('SurahList');
   };
 
   return (
@@ -45,7 +45,7 @@ const HomeScreen = () => {
           {/* Main Action Cards */}
           <View className="space-y-4 px-6">
             {/* Read Quran Card */}
-            <CustomListItem title={"Read the Qur'an"} icon={'📖'} onPress={navigateToChapterList} />
+            <CustomListItem title={"Read the Qur'an"} icon={'📖'} onPress={navigateToSurahList} />
             {/* Settings Card */}
             <CustomListItem title={'Settings'} icon="⚙️" onPress={() => {}} />
           </View>

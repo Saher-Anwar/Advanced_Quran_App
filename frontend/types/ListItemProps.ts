@@ -4,7 +4,7 @@ export interface ListItemDataProp {
   translation: string;
   revelationType: 'Meccan' | 'Medinan';
   numOfVerses: number;
-  chapterNumber: number;
+  number: number;
 }
 
 export interface ListItemComponentProp {

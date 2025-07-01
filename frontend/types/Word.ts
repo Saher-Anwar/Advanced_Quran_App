@@ -13,19 +13,6 @@ export interface WordInfo {
   partOfSpeech?: string;
 }
 
-export interface Verse {
-  verseNumber: number;
-  translation?: string;
-  words: WordInfo[];
-}
-
-export interface ChapterData {
-  chapterNumber: number;
-  chapterName: string;
-  totalVerses: number;
-  verses: Verse[];
-}
-
 export interface ClickableWordProps {
   word: WordInfo;
   onWordPress: (word: WordInfo, ref: RefObject<View>) => void;

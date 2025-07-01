@@ -29,7 +29,7 @@ const SearchResultsInfo: React.FC<{
   );
 };
 
-const ChapterListScreen = ({ surahs = SAMPLE_SURAHS }: SurahListProps) => {
+const SurahListScreen = ({ surahs = SAMPLE_SURAHS }: SurahListProps) => {
   const [sortMenuVisible, setSortMenuVisible] = useState<boolean>(false);
   const [searchVisible, setSearchVisible] = useState<boolean>(false);
 
@@ -121,5 +121,5 @@ const ChapterListScreen = ({ surahs = SAMPLE_SURAHS }: SurahListProps) => {
   );
 };
 
-export default ChapterListScreen;
+export default SurahListScreen;
 export type { Surah, SortOption };

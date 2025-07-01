@@ -7,7 +7,7 @@ const ListItemInfo = ({
   translation,
   revelationType,
   numOfVerses,
-  chapterNumber,
+  number: chapterNumber,
 }: ListItemDataProp) => {
   return (
     <View style={styles.container}>

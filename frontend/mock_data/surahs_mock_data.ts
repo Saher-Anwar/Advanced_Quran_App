@@ -1,10 +1,10 @@
-import { ChapterData } from 'types/Word';
+import { SurahData } from 'types/Surah';
 
 // Mock data for different chapters
-export const mockChapterData: Record<string, ChapterData> = {
+export const mockSurahData: Record<string, SurahData> = {
   '1': {
-    chapterNumber: 1,
-    chapterName: 'Al-Fatiha',
+    number: 1,
+    name: 'Al-Fatiha',
     totalVerses: 7,
     verses: [
       {
@@ -118,8 +118,8 @@ export const mockChapterData: Record<string, ChapterData> = {
     ],
   },
   '2': {
-    chapterNumber: 2,
-    chapterName: 'Al-Baqarah',
+    number: 2,
+    name: 'Al-Baqarah',
     totalVerses: 286,
     verses: [
       {
@@ -193,11 +193,11 @@ export const mockChapterData: Record<string, ChapterData> = {
 };
 
 // Mock API function to simulate fetching data
-export const fetchChapterData = async (chapterId: string): Promise<ChapterData> => {
+export const fetchSurahData = async (chapterId: string): Promise<SurahData> => {
   // Simulate network delay
   await new Promise((resolve) => setTimeout(resolve, 1000));
 
-  const data = mockChapterData[chapterId];
+  const data = mockSurahData[chapterId];
 
   if (!data) {
     throw new Error(`Chapter ${chapterId} not found`);
@@ -207,14 +207,14 @@ export const fetchChapterData = async (chapterId: string): Promise<ChapterData> 
 };
 
 // Mock function to get all available chapters
-export const getAvailableChapters = (): {
+export const getAvailableSurahs = (): {
   id: string;
   name: string;
   totalVerses: number;
 }[] => {
-  return Object.values(mockChapterData).map((chapter) => ({
-    id: chapter.chapterNumber.toString(),
-    name: chapter.chapterName,
-    totalVerses: chapter.totalVerses,
+  return Object.values(mockSurahData).map((surah) => ({
+    id: surah.number.toString(),
+    name: surah.name,
+    totalVerses: surah.totalVerses,
   }));
 };
