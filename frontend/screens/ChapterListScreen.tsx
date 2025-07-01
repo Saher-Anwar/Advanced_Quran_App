@@ -29,7 +29,6 @@ const SearchResultsInfo: React.FC<{
   );
 };
 
-// Main Component
 const ChapterListScreen = ({ surahs = SAMPLE_SURAHS }: SurahListProps) => {
   const [sortMenuVisible, setSortMenuVisible] = useState<boolean>(false);
   const [searchVisible, setSearchVisible] = useState<boolean>(false);

@@ -1,5 +1,5 @@
 import { Surah } from 'types/Chapter';
-import { ListItemDataProp } from '../types/Chapter';
+import { ListItemDataProp } from 'types/ListItemProps';
 
 export const listOfChapters: ListItemDataProp[] = [
   {

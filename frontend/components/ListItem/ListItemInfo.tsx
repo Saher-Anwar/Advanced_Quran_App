@@ -1,5 +1,5 @@
-import { StyleSheet, Text, View } from "react-native";
-import { ListItemDataProp } from "../../types/Chapter";
+import { StyleSheet, Text, View } from 'react-native';
+import { ListItemDataProp } from 'types/ListItemProps';
 
 const ListItemInfo = ({
   name,
@@ -23,13 +23,13 @@ export default ListItemInfo;
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: "column",
-    alignItems: "flex-start",
+    flexDirection: 'column',
+    alignItems: 'flex-start',
   },
   nameText: {
     fontSize: 24,
   },
   subInfo: {
-    fontStyle: "italic",
+    fontStyle: 'italic',
   },
 });

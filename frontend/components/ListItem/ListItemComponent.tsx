@@ -1,7 +1,7 @@
-import { StyleSheet, View, Text, TouchableOpacity } from "react-native";
-import { ListItemComponentProp, ListItemDataProp } from "../../types/Chapter";
-import ListItemInfo from "./ListItemInfo";
-import NumberSymbol from "./NumberSymbol";
+import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
+import { ListItemComponentProp, ListItemDataProp } from 'types/ListItemProps';
+import ListItemInfo from './ListItemInfo';
+import NumberSymbol from './NumberSymbol';
 
 const ListItemComponent = ({ data, onPress }: ListItemComponentProp) => (
   <TouchableOpacity style={styles.container} onPress={onPress}>
@@ -21,28 +21,28 @@ export default ListItemComponent;
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: "row",
-    backgroundColor: "lightblue",
+    flexDirection: 'row',
+    backgroundColor: 'lightblue',
     margin: 10,
   },
   symbolContainer: {
-    width: "10%",
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "red",
+    width: '10%',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'red',
   },
   listItemInfoContainer: {
-    width: "60%",
-    backgroundColor: "yellow",
+    width: '60%',
+    backgroundColor: 'yellow',
     paddingHorizontal: 10,
   },
   translationContainer: {
-    width: "30%",
-    backgroundColor: "gray",
+    width: '30%',
+    backgroundColor: 'gray',
     paddingHorizontal: 5,
   },
   translationText: {
-    textAlign: "center",
+    textAlign: 'center',
     fontSize: 18,
   },
 });
