@@ -8,7 +8,7 @@ const SurahCard = React.memo(({ surah }: { readonly surah: Surah }) => {
 
   const handlePress = useCallback(() => {
     console.log('Default handler:', surah.name);
-    navigation.navigate('Chapter', {
+    navigation.navigate('Surah', {
       surahInfo: {
         number: surah.id,
         name: surah.name,

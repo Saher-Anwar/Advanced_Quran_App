@@ -4,5 +4,5 @@ import { SurahData } from 'types/Surah';
 export type RootStackParamList = {
   Home: undefined;
   SurahList: undefined;
-  Chapter: { surahInfo: SurahData };
+  Surah: { surahInfo: SurahData };
 };

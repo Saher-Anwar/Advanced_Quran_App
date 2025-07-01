@@ -7,7 +7,7 @@ import { SurahData } from 'types/Surah';
 import { fetchSurahData } from 'mock_data/surahs_mock_data';
 import PageTitle from 'components/PageTitle';
 
-type SurahScreenProps = NativeStackScreenProps<RootStackParamList, 'Chapter'>;
+type SurahScreenProps = NativeStackScreenProps<RootStackParamList, 'Surah'>;
 
 const SurahScreen = ({ route }: SurahScreenProps) => {
   const { surahInfo } = route.params;
